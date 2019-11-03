@@ -114,23 +114,28 @@ struct EventCard : View
     
     var body : some View
     {
-        return  VStack
+        return  VStack  // Parent container
                 {
-                    VStack(alignment: .leading)
+                    VStack(alignment: .leading)  // ScrollView element texts
                     {
                         Text(text1).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
-                        Text(text2).font(.title)
+                        
+                            Text(text2).font(.title)
                         Text(text3).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
+                        
                     }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
-                    HStack
+                    HStack  // ScrollView image / mask
                     {
-                        Image(image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .cornerRadius(10)
-                            .shadow(radius: 10)
+                        Button (action:{
+                        }){
+                            Image(image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                        }.buttonStyle(PlainButtonStyle())
                         
                         Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)
                     }
