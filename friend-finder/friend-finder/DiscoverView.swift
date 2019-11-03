@@ -64,9 +64,9 @@ struct DiscoverView: View
                     // EventCards horizontal stack
                     HStack
                     {
-                        EventCard(image: "shpacsuf", text1: "TODAY", text2: "SHPA Blood Drive", text3: "Student Health Professions Association")
-                        EventCard(image: "heatcsuf", text1: "SUNDAY", text2: "Sunday Service", text3: "Heat Campus Ministry")
-                        EventCard(image: "aiccsuf", text1: "MONDAY", text2: "Council Meeting", text3: "Arts Inter-Club Council")
+                        EventItemCard(image: "shpacsuf", text1: "TODAY", text2: "SHPA Blood Drive", text3: "Student Health Professions Association")
+                        EventItemCard(image: "heatcsuf", text1: "SUNDAY", text2: "Sunday Service", text3: "Heat Campus Ministry")
+                        EventItemCard(image: "aiccsuf", text1: "MONDAY", text2: "Council Meeting", text3: "Arts Inter-Club Council")
                         
                     // EventCards horizontal stack formatting
                     }.padding(.leading, 40)
@@ -119,7 +119,7 @@ struct DiscoverView: View
 /*
     Custom Event Card View
 */
-struct EventCard : View
+struct EventItemCard : View
 {
     var image : String  // Organization image
     var text1 : String  // Day of the week
@@ -128,7 +128,7 @@ struct EventCard : View
     
     var body : some View
     {
-                // EventCard parent container
+                // EventItemCard parent container
         return  VStack
                 {
                     // ScrollView element texts
@@ -158,7 +158,7 @@ struct EventCard : View
                         Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)
                     }
                 
-                // EventCard parent container formatting
+                // EventItemCard parent container formatting
                 }.frame(minHeight: 0, maxHeight: 276)
     }
 }

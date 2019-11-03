@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct ProfileView: View
 {
     var body: some View
@@ -15,90 +16,135 @@ struct ProfileView: View
         // Parent container (Full view)
         VStack
         {
-            // Navbar container (Top title / settings)
-            HStack
+            // ProfileInfo container
+            ProfileInfo (profilePicture: "Alpar", studentName: "Issac Lentz", studentCity: "Fullerton, CA")
+            
+            Divider()
+            
+            Text("Member of ").foregroundColor(Color.gray) + Text("3").bold().fontWeight(.heavy).foregroundColor(Color.gray) + Text(" Campus Clubs").foregroundColor(Color.gray)
+            // Edit profile button
+            Button(action:
             {
-                // Title container
-                VStack (alignment: .leading)
-                {
-                            
-                    Text ("Discover").font(.largeTitle).fontWeight(.bold).bold().foregroundColor(Color.black)
-                            
-                    // Line divider
-                    Divider().padding(.vertical, -15)
-                            
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top).padding(.top, 25)
-                        
-                // Settings button
-                Button(action:
-                {
-                    // Add an action here
-                }, label:
-                {
-                    Image(systemName: "gear").font(.title).foregroundColor(.gray)
-                })
-                 
-            // Navbar container formatting
-            }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30)
                 
-            // Events ScrollView
-            ScrollView (.horizontal, showsIndicators: false)
+            }) {
+                Text("Find More").font(.subheadline).fontWeight(.medium).frame(minWidth: 0, maxWidth: .infinity, alignment: .center).padding(.top, 3)
+            }
+
+            Divider()
+            
+            
+
+            NavigationView
             {
-                // Secondary parent view (Makes left align & padding look correct)
-                HStack
+                List {
+                    // EventItemButons (Hard-coded)
+                    EventItemButton(iconColor: Color.red, eventIcon: "heart", nameText: "SHPH Blood Drive", dateText: "Monday, September 30th, 7:30 AM", likesText: "5")
+                    EventItemButton(iconColor: Color.blue, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
+                    EventItemButton(iconColor: Color.green, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, October 1st, 4:00 PM", likesText: "1")
+                    EventItemButton(iconColor: Color.orange, eventIcon: "bandage", nameText: "U.S. Army Medical DRASH", dateText: "Wednesday, October 30th, 8:00 AM", likesText: "9")
+                    EventItemButton(iconColor: Color.black, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
+                    EventItemButton(iconColor: Color.purple, eventIcon: "house", nameText: "Fall Open House", dateText: "Friday, November 22nd, 6:30 PM", likesText: "2")
+                    EventItemButton(iconColor: Color.pink, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, October 1st, 4:00 PM", likesText: "1")
+                    EventItemButton(iconColor: Color.yellow, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
+                    EventItemButton(iconColor: Color.gray, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, December 3rd, 4:00 PM", likesText: "3")
+
+
+                    
+                    
+                }
+                .navigationBarItems(leading:
+
+                    Spacer()
+                )
+                    .navigationBarTitle(Text("Recent Events"), displayMode: .automatic).lineLimit(100)
+            }
+            
+            
+
+        // Parent container formatting
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top).padding(.top, 35).lineLimit(100)
+    }
+}
+
+struct EventItemButton : View
+{
+    var iconColor : Color
+    var eventIcon : String
+    var nameText : String
+    var dateText : String
+    var likesText : String
+
+    var body : some View
+    {
+                // EventItemButton parent container
+        return  Button(action:
+                {})
                 {
-                    // EventCards horizontal stack
                     HStack
                     {
-                        EventCard(image: "shpacsuf", text1: "TODAY", text2: "SHPA Blood Drive", text3: "Student Health Professions Association")
-                        EventCard(image: "heatcsuf", text1: "SUNDAY", text2: "Sunday Service", text3: "Heat Campus Ministry")
-                        EventCard(image: "aiccsuf", text1: "MONDAY", text2: "Council Meeting", text3: "Arts Inter-Club Council")
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                             .fill(iconColor)
+                            .frame(width: 30, height: 30).overlay(Image(systemName: eventIcon).font(.footnote).foregroundColor(Color.white))
                         
-                    // EventCards horizontal stack formatting
-                    }.padding(.leading, 40)
+                        VStack
+                        {
+                            Text(nameText).font(.subheadline).foregroundColor(Color.black).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).aspectRatio(contentMode: .fill)
+                            Text(dateText).font(.subheadline).foregroundColor(Color.gray).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        }
+                        
+                        Text (likesText).font(.subheadline).foregroundColor(Color.gray)
+                        
+                    // EventItemButton parent container formatting
+                    }.frame(minWidth: 0, maxWidth: 350, minHeight: 0, maxHeight: 45, alignment: Alignment.leading)
                 }
-                    
-            // ScrollView formatting
-            }.padding(.vertical, 25)
-                
-            // Notifications parent container
-            VStack
-            {
-                // Notifications title container
-                HStack
-                {
-                    Text("Notifications").font(.title).bold().foregroundColor(Color.black).padding(.horizontal, 15)
-                            
-                    Button("Clear")
+    }
+}
+
+
+struct ProfileInfo : View
+{
+    var profilePicture : String
+    var studentName : String
+    var studentCity : String
+    
+    var body : some View
+    {
+               // ProfileInfo parent container
+        return HStack
+               {
+                    ZStack
                     {
-                        // Button was tapped
-                    }.padding(.horizontal, 10)
-                            
-                    Button("See All")
+                        
+                        // Profile image overlay
+                        Image("ProfilePicOverlay01").resizable().aspectRatio(contentMode: .fit).shadow(radius: 40).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+
+                        // Profile image
+                        Image(profilePicture).resizable().aspectRatio(contentMode: .fit).overlay(RoundedRectangle(cornerRadius: 100).stroke(Color.blue, lineWidth: 15)).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity).aspectRatio(contentMode: .fit).frame(minHeight: 0, maxHeight: 100).cornerRadius(100).shadow(radius: 40)
+                        
+                    }.frame(minWidth: 0, maxWidth: 150, minHeight: 0, maxHeight: 175)
+            
+                    // Horizontal spacing
+                    Text("   ")
+                    
+                    // Profile title texts vertical stack
+                    VStack
                     {
-                        // Button was tapped
-                    }.padding(.horizontal, 10)
+                        Text (studentName).font(.title).fontWeight(.bold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        Text(studentCity).font(.subheadline).fontWeight(.medium).foregroundColor(.gray).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
+                        // Edit profile button
+                        Button(action:
+                        {
+                            
+                        }) {
+                            Text("Edit Profile").font(.subheadline).fontWeight(.medium).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).padding(.top, 3)
+                        }
                     
-                // Notifications title container formatting
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading).padding(.horizontal, 10)
-                    
-                // Notifications vertical stack
-                VStack
-                {
-                    // Four hard-coded 'Notification Items'
-                    NotificationItem(image: "envelope", text1: "New message from Anthony Rodriguez")
-                    NotificationItem(image: "gear", text1: "New theme available: Dark Theme")
-                    NotificationItem(image: "person.crop.circle.badge.plus", text1: "3 New subscribers")
-                    NotificationItem(image: "person.3", text1: "New club activity: SHPA Blood Drive")
-                          
-                // Notifications vertical stack formatting
-                }.padding(.horizontal, 25)
+                    // Profile title texts vertical stack formatting
+                    }.frame(minWidth: 0, maxWidth: 175, alignment: .leading)
                 
-            // Notifications parent container formatting
-            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: Alignment.center).aspectRatio(contentMode: .fit).padding(.vertical, 20)
-               
-        // Parent container formatting
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
+            // ProfileInfo parent container formatting
+        }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top)
     }
 }
 
@@ -107,6 +153,7 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView()
     }
 }
+
 /*
  
 

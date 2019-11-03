@@ -34,6 +34,7 @@
 		A1F7A6F423322DC500BC7537 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1F7A6F523322DC500BC7537 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A1F7A6F623322DC500BC7537 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		BB38442A236F8B6F00243ED5 /* events.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = events.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				A1F7A6F623322DC500BC7537 /* CreateView.swift */,
 				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
 				A1F7A6F523322DC500BC7537 /* ProfileView.swift */,
+				BB38442A236F8B6F00243ED5 /* events.geojson */,
 				A1F7A6F423322DC500BC7537 /* Constants.swift */,
 				A1F7A6E423322D0200BC7537 /* Assets.xcassets */,
 				A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */,

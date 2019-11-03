@@ -1,0 +1,57 @@
+[{
+    "id": 5,
+    "title": "Joker",
+    "year": "2019",
+    "image": "",
+    "created_at": "2019-10-06T17:55:21.374Z",
+    "updated_at": "2019-10-06T17:55:21.374Z"
+}, {
+    "id": 1,
+    "title": "Pulp Fiction",
+    "year": "1994",
+    "image": "",
+    "created_at": "2019-10-06T15:26:36.675Z",
+    "updated_at": "2019-10-06T18:05:31.649Z"
+}, {
+    "id": 4,
+    "title": " The Godfather ",
+    "year": "1972",
+    "image": "",
+    "created_at": "2019-10-06T15:27:38.123Z",
+    "updated_at": "2019-10-06T18:05:50.242Z"
+}, {
+    "id": 6,
+    "title": "The Dark Knight ",
+    "year": "2008",
+    "image": "",
+    "created_at": "2019-10-06T18:06:12.933Z",
+    "updated_at": "2019-10-06T18:06:12.933Z"
+}, {
+    "id": 7,
+    "title": "Fight Club",
+    "year": "1999",
+    "image": "",
+    "created_at": "2019-10-06T18:06:33.096Z",
+    "updated_at": "2019-10-06T18:06:33.096Z"
+}, {
+    "id": 8,
+    "title": " Inception",
+    "year": "2010",
+    "image": "",
+    "created_at": "2019-10-06T18:06:52.034Z",
+    "updated_at": "2019-10-06T18:06:52.034Z"
+}, {
+    "id": 2,
+    "title": "The Matrix ",
+    "year": "1999",
+    "image": "",
+    "created_at": "2019-10-06T15:26:48.042Z",
+    "updated_at": "2019-10-06T18:08:00.902Z"
+}, {
+    "id": 3,
+    "title": "The Shawshank Redemption ",
+    "year": "1984",
+    "image": "",
+    "created_at": "2019-10-06T15:26:59.572Z",
+    "updated_at": "2019-10-06T18:08:47.637Z"
+}]
