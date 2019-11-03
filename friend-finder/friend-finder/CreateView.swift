@@ -76,3 +76,54 @@ struct Person : View {
         }
     }
 }
+
+
+
+
+
+// NavView / List Example
+/*
+ 
+
+NavigationView
+{
+    List {
+        Text("Test01")
+        Text("Test01")
+        Text("Test01")
+        Text("Test01")
+        Text("Test01")
+        Text("Test01")
+    }
+    .navigationBarItems(leading:
+        
+        // Date text: Call to current date function above body
+        Text ("Saturday, \(now, formatter: Self.dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.center).foregroundColor(Color.gray),trailing:
+        
+        // Settings button
+        Button(action: {
+            // Add action
+        }, label: {
+            Image(systemName: "gear").font(.title).foregroundColor(.gray)
+            
+        })
+    )
+        .navigationBarTitle(Text("Discover"))
+}
+ */
+
+
+
+// Animation Example
+ 
+ //Image("image1")
+      //   .resizable()
+      //   .aspectRatio(contentMode: .fit)
+      //   .cornerRadius(10)
+      //   .shadow(color: Color.gray, radius: 10)
+      //   .scaleEffect(animation ? 0.5 : 1)
+      ///   .rotation3DEffect(Angle(degrees: animation ? 0 : 360), axis: (x: 0, y: 360, z: 0))
+       //  .animation(Animation.easeInOut(duration: /3).repeatForever())
+      //   .onAppear{ self.animation.toggle() }
+ 
+ //}.padding(.horizontal, 20)
