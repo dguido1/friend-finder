@@ -7,66 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB6B9FEB234BC6C300FC24B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6B9FEA234BC6C300FC24B5 /* AppDelegate.swift */; };
-		BB6B9FED234BC6C300FC24B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6B9FEC234BC6C300FC24B5 /* SceneDelegate.swift */; };
-		BB6B9FEF234BC6C300FC24B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6B9FEE234BC6C300FC24B5 /* ContentView.swift */; };
-		BB6B9FF1234BC6C400FC24B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6B9FF0234BC6C400FC24B5 /* Assets.xcassets */; };
-		BB6B9FF4234BC6C400FC24B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6B9FF3234BC6C400FC24B5 /* Preview Assets.xcassets */; };
-		BB6B9FF7234BC6C400FC24B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6B9FF5234BC6C400FC24B5 /* LaunchScreen.storyboard */; };
-		BB6BA002234BC6C500FC24B5 /* friend_finderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6BA001234BC6C500FC24B5 /* friend_finderTests.swift */; };
-		BB6BA00D234BC6C500FC24B5 /* friend_finderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6BA00C234BC6C500FC24B5 /* friend_finderUITests.swift */; };
+		A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */; };
+		A1F7A6E123322CFF00BC7537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */; };
+		A1F7A6E323322CFF00BC7537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6E223322CFF00BC7537 /* ContentView.swift */; };
+		A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E423322D0200BC7537 /* Assets.xcassets */; };
+		A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */; };
+		A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */; };
+		A1F7A6F723322DC500BC7537 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F223322DC500BC7537 /* SearchView.swift */; };
+		A1F7A6F823322DC600BC7537 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F323322DC500BC7537 /* DiscoverView.swift */; };
+		A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F423322DC500BC7537 /* Constants.swift */; };
+		A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F523322DC500BC7537 /* ProfileView.swift */; };
+		A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F623322DC500BC7537 /* CreateView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BB6B9FFE234BC6C500FC24B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB6B9FDF234BC6C300FC24B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB6B9FE6234BC6C300FC24B5;
-			remoteInfo = "friend-finder";
-		};
-		BB6BA009234BC6C500FC24B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB6B9FDF234BC6C300FC24B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB6B9FE6234BC6C300FC24B5;
-			remoteInfo = "friend-finder";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		BB6B9FE7234BC6C300FC24B5 /* friend-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friend-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6B9FEA234BC6C300FC24B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB6B9FEC234BC6C300FC24B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB6B9FEE234BC6C300FC24B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BB6B9FF0234BC6C400FC24B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB6B9FF3234BC6C400FC24B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB6B9FF6234BC6C400FC24B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BB6B9FF8234BC6C400FC24B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB6B9FFD234BC6C500FC24B5 /* friend-finderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-finderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6BA001234BC6C500FC24B5 /* friend_finderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friend_finderTests.swift; sourceTree = "<group>"; };
-		BB6BA003234BC6C500FC24B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB6BA008234BC6C500FC24B5 /* friend-finderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-finderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6BA00C234BC6C500FC24B5 /* friend_finderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friend_finderUITests.swift; sourceTree = "<group>"; };
-		BB6BA00E234BC6C500FC24B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1F7A6DB23322CFF00BC7537 /* friend-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friend-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1F7A6E223322CFF00BC7537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1F7A6E423322D0200BC7537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1F7A6EA23322D0300BC7537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1F7A6EC23322D0300BC7537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1F7A6F223322DC500BC7537 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A1F7A6F323322DC500BC7537 /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		A1F7A6F423322DC500BC7537 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1F7A6F523322DC500BC7537 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A1F7A6F623322DC500BC7537 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB6B9FE4234BC6C300FC24B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6B9FFA234BC6C500FC24B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6BA005234BC6C500FC24B5 /* Frameworks */ = {
+		A1F7A6D823322CFF00BC7537 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,76 +47,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB6B9FDE234BC6C300FC24B5 = {
+		A1F7A6D223322CFF00BC7537 = {
 			isa = PBXGroup;
 			children = (
-				BB6B9FE9234BC6C300FC24B5 /* friend-finder */,
-				BB6BA000234BC6C500FC24B5 /* friend-finderTests */,
-				BB6BA00B234BC6C500FC24B5 /* friend-finderUITests */,
-				BB6B9FE8234BC6C300FC24B5 /* Products */,
+				A1F7A6DD23322CFF00BC7537 /* friend-finder */,
+				A1F7A6DC23322CFF00BC7537 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB6B9FE8234BC6C300FC24B5 /* Products */ = {
+		A1F7A6DC23322CFF00BC7537 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB6B9FE7234BC6C300FC24B5 /* friend-finder.app */,
-				BB6B9FFD234BC6C500FC24B5 /* friend-finderTests.xctest */,
-				BB6BA008234BC6C500FC24B5 /* friend-finderUITests.xctest */,
+				A1F7A6DB23322CFF00BC7537 /* friend-finder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB6B9FE9234BC6C300FC24B5 /* friend-finder */ = {
+		A1F7A6DD23322CFF00BC7537 /* friend-finder */ = {
 			isa = PBXGroup;
 			children = (
-				BB6B9FEA234BC6C300FC24B5 /* AppDelegate.swift */,
-				BB6B9FEC234BC6C300FC24B5 /* SceneDelegate.swift */,
-				BB6B9FEE234BC6C300FC24B5 /* ContentView.swift */,
-				BB6B9FF0234BC6C400FC24B5 /* Assets.xcassets */,
-				BB6B9FF5234BC6C400FC24B5 /* LaunchScreen.storyboard */,
-				BB6B9FF8234BC6C400FC24B5 /* Info.plist */,
-				BB6B9FF2234BC6C400FC24B5 /* Preview Content */,
+				A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */,
+				A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */,
+				A1F7A6E223322CFF00BC7537 /* ContentView.swift */,
+				A1F7A6F323322DC500BC7537 /* DiscoverView.swift */,
+				A1F7A6F623322DC500BC7537 /* CreateView.swift */,
+				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
+				A1F7A6F523322DC500BC7537 /* ProfileView.swift */,
+				A1F7A6F423322DC500BC7537 /* Constants.swift */,
+				A1F7A6E423322D0200BC7537 /* Assets.xcassets */,
+				A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */,
+				A1F7A6EC23322D0300BC7537 /* Info.plist */,
+				A1F7A6E623322D0200BC7537 /* Preview Content */,
 			);
 			path = "friend-finder";
 			sourceTree = "<group>";
 		};
-		BB6B9FF2234BC6C400FC24B5 /* Preview Content */ = {
+		A1F7A6E623322D0200BC7537 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BB6B9FF3234BC6C400FC24B5 /* Preview Assets.xcassets */,
+				A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BB6BA000234BC6C500FC24B5 /* friend-finderTests */ = {
-			isa = PBXGroup;
-			children = (
-				BB6BA001234BC6C500FC24B5 /* friend_finderTests.swift */,
-				BB6BA003234BC6C500FC24B5 /* Info.plist */,
-			);
-			path = "friend-finderTests";
-			sourceTree = "<group>";
-		};
-		BB6BA00B234BC6C500FC24B5 /* friend-finderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BB6BA00C234BC6C500FC24B5 /* friend_finderUITests.swift */,
-				BB6BA00E234BC6C500FC24B5 /* Info.plist */,
-			);
-			path = "friend-finderUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB6B9FE6234BC6C300FC24B5 /* friend-finder */ = {
+		A1F7A6DA23322CFF00BC7537 /* friend-finder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB6BA011234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finder" */;
+			buildConfigurationList = A1F7A6EF23322D0300BC7537 /* Build configuration list for PBXNativeTarget "friend-finder" */;
 			buildPhases = (
-				BB6B9FE3234BC6C300FC24B5 /* Sources */,
-				BB6B9FE4234BC6C300FC24B5 /* Frameworks */,
-				BB6B9FE5234BC6C300FC24B5 /* Resources */,
+				A1F7A6D723322CFF00BC7537 /* Sources */,
+				A1F7A6D823322CFF00BC7537 /* Frameworks */,
+				A1F7A6D923322CFF00BC7537 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -153,69 +107,25 @@
 			);
 			name = "friend-finder";
 			productName = "friend-finder";
-			productReference = BB6B9FE7234BC6C300FC24B5 /* friend-finder.app */;
+			productReference = A1F7A6DB23322CFF00BC7537 /* friend-finder.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BB6B9FFC234BC6C500FC24B5 /* friend-finderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB6BA014234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finderTests" */;
-			buildPhases = (
-				BB6B9FF9234BC6C500FC24B5 /* Sources */,
-				BB6B9FFA234BC6C500FC24B5 /* Frameworks */,
-				BB6B9FFB234BC6C500FC24B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB6B9FFF234BC6C500FC24B5 /* PBXTargetDependency */,
-			);
-			name = "friend-finderTests";
-			productName = "friend-finderTests";
-			productReference = BB6B9FFD234BC6C500FC24B5 /* friend-finderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB6BA007234BC6C500FC24B5 /* friend-finderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB6BA017234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finderUITests" */;
-			buildPhases = (
-				BB6BA004234BC6C500FC24B5 /* Sources */,
-				BB6BA005234BC6C500FC24B5 /* Frameworks */,
-				BB6BA006234BC6C500FC24B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB6BA00A234BC6C500FC24B5 /* PBXTargetDependency */,
-			);
-			name = "friend-finderUITests";
-			productName = "friend-finderUITests";
-			productReference = BB6BA008234BC6C500FC24B5 /* friend-finderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB6B9FDF234BC6C300FC24B5 /* Project object */ = {
+		A1F7A6D323322CFF00BC7537 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = csuf;
+				ORGANIZATIONNAME = CSUF;
 				TargetAttributes = {
-					BB6B9FE6234BC6C300FC24B5 = {
+					A1F7A6DA23322CFF00BC7537 = {
 						CreatedOnToolsVersion = 11.0;
-					};
-					BB6B9FFC234BC6C500FC24B5 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = BB6B9FE6234BC6C300FC24B5;
-					};
-					BB6BA007234BC6C500FC24B5 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = BB6B9FE6234BC6C300FC24B5;
 					};
 				};
 			};
-			buildConfigurationList = BB6B9FE2234BC6C300FC24B5 /* Build configuration list for PBXProject "friend-finder" */;
+			buildConfigurationList = A1F7A6D623322CFF00BC7537 /* Build configuration list for PBXProject "friend-finder" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,92 +133,52 @@
 				en,
 				Base,
 			);
-			mainGroup = BB6B9FDE234BC6C300FC24B5;
-			productRefGroup = BB6B9FE8234BC6C300FC24B5 /* Products */;
+			mainGroup = A1F7A6D223322CFF00BC7537;
+			productRefGroup = A1F7A6DC23322CFF00BC7537 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB6B9FE6234BC6C300FC24B5 /* friend-finder */,
-				BB6B9FFC234BC6C500FC24B5 /* friend-finderTests */,
-				BB6BA007234BC6C500FC24B5 /* friend-finderUITests */,
+				A1F7A6DA23322CFF00BC7537 /* friend-finder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB6B9FE5234BC6C300FC24B5 /* Resources */ = {
+		A1F7A6D923322CFF00BC7537 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6B9FF7234BC6C400FC24B5 /* LaunchScreen.storyboard in Resources */,
-				BB6B9FF4234BC6C400FC24B5 /* Preview Assets.xcassets in Resources */,
-				BB6B9FF1234BC6C400FC24B5 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6B9FFB234BC6C500FC24B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6BA006234BC6C500FC24B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */,
+				A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */,
+				A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB6B9FE3234BC6C300FC24B5 /* Sources */ = {
+		A1F7A6D723322CFF00BC7537 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6B9FEB234BC6C300FC24B5 /* AppDelegate.swift in Sources */,
-				BB6B9FED234BC6C300FC24B5 /* SceneDelegate.swift in Sources */,
-				BB6B9FEF234BC6C300FC24B5 /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6B9FF9234BC6C500FC24B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB6BA002234BC6C500FC24B5 /* friend_finderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB6BA004234BC6C500FC24B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB6BA00D234BC6C500FC24B5 /* friend_finderUITests.swift in Sources */,
+				A1F7A6F723322DC500BC7537 /* SearchView.swift in Sources */,
+				A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */,
+				A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */,
+				A1F7A6E123322CFF00BC7537 /* SceneDelegate.swift in Sources */,
+				A1F7A6F823322DC600BC7537 /* DiscoverView.swift in Sources */,
+				A1F7A6E323322CFF00BC7537 /* ContentView.swift in Sources */,
+				A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */,
+				A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BB6B9FFF234BC6C500FC24B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB6B9FE6234BC6C300FC24B5 /* friend-finder */;
-			targetProxy = BB6B9FFE234BC6C500FC24B5 /* PBXContainerItemProxy */;
-		};
-		BB6BA00A234BC6C500FC24B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB6B9FE6234BC6C300FC24B5 /* friend-finder */;
-			targetProxy = BB6BA009234BC6C500FC24B5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BB6B9FF5234BC6C400FC24B5 /* LaunchScreen.storyboard */ = {
+		A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB6B9FF6234BC6C400FC24B5 /* Base */,
+				A1F7A6EA23322D0300BC7537 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +186,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BB6BA00F234BC6C500FC24B5 /* Debug */ = {
+		A1F7A6ED23322D0300BC7537 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		BB6BA010234BC6C500FC24B5 /* Release */ = {
+		A1F7A6EE23322D0300BC7537 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,164 +300,68 @@
 			};
 			name = Release;
 		};
-		BB6BA012234BC6C500FC24B5 /* Debug */ = {
+		A1F7A6F023322D0300BC7537 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"friend-finder/Preview Content\"";
+				DEVELOPMENT_TEAM = R252PR8AVU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "friend-finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finder";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csuf.friend-finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BB6BA013234BC6C500FC24B5 /* Release */ = {
+		A1F7A6F123322D0300BC7537 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"friend-finder/Preview Content\"";
+				DEVELOPMENT_TEAM = R252PR8AVU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "friend-finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finder";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csuf.friend-finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		BB6BA015234BC6C500FC24B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "friend-finderTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finderTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/friend-finder.app/friend-finder";
-			};
-			name = Debug;
-		};
-		BB6BA016234BC6C500FC24B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "friend-finderTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finderTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/friend-finder.app/friend-finder";
-			};
-			name = Release;
-		};
-		BB6BA018234BC6C500FC24B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "friend-finderUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finderUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "friend-finder";
-			};
-			name = Debug;
-		};
-		BB6BA019234BC6C500FC24B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "friend-finderUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "csuf.friend-finderUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "friend-finder";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB6B9FE2234BC6C300FC24B5 /* Build configuration list for PBXProject "friend-finder" */ = {
+		A1F7A6D623322CFF00BC7537 /* Build configuration list for PBXProject "friend-finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB6BA00F234BC6C500FC24B5 /* Debug */,
-				BB6BA010234BC6C500FC24B5 /* Release */,
+				A1F7A6ED23322D0300BC7537 /* Debug */,
+				A1F7A6EE23322D0300BC7537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB6BA011234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finder" */ = {
+		A1F7A6EF23322D0300BC7537 /* Build configuration list for PBXNativeTarget "friend-finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB6BA012234BC6C500FC24B5 /* Debug */,
-				BB6BA013234BC6C500FC24B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB6BA014234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB6BA015234BC6C500FC24B5 /* Debug */,
-				BB6BA016234BC6C500FC24B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB6BA017234BC6C500FC24B5 /* Build configuration list for PBXNativeTarget "friend-finderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB6BA018234BC6C500FC24B5 /* Debug */,
-				BB6BA019234BC6C500FC24B5 /* Release */,
+				A1F7A6F023322D0300BC7537 /* Debug */,
+				A1F7A6F123322D0300BC7537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BB6B9FDF234BC6C300FC24B5 /* Project object */;
+	rootObject = A1F7A6D323322CFF00BC7537 /* Project object */;
 }

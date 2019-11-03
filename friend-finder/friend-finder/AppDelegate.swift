@@ -1,10 +1,10 @@
 //
 //  AppDelegate.swift
-//  friend-finder
 //
-//  Created by David Guido on 10/7/19.
-//  Copyright © 2019 csuf. All rights reserved.
+//  Friend Finder, CPSC 362, M/W: 11:00am-12:50pm
+//  CSUF Fall 2019
 //
+//  Created by David Guido, Pierce Findlay & Kayla Nguyen on 11/01/2019.
 
 import UIKit
 
