@@ -64,9 +64,9 @@ struct DiscoverView: View
                     // EventCards horizontal stack
                     HStack
                     {
-                        EventItemCard(image: "shpacsuf", text1: "TODAY", text2: "SHPA Blood Drive", text3: "Student Health Professions Association")
-                        EventItemCard(image: "heatcsuf", text1: "SUNDAY", text2: "Sunday Service", text3: "Heat Campus Ministry")
-                        EventItemCard(image: "aiccsuf", text1: "MONDAY", text2: "Council Meeting", text3: "Arts Inter-Club Council")
+                        EventItemCard(cardImage: "shpacsuf", dayOfWeek: "TODAY", eventName: "SHPA Blood Drive", organizationName: "Student Health Professions Association")
+                        EventItemCard(cardImage: "heatcsuf", dayOfWeek: "SUNDAY", eventName: "Sunday Service", organizationName: "Heat Campus Ministry")
+                        EventItemCard(cardImage: "aiccsuf", dayOfWeek: "MONDAY", eventName: "Council Meeting", organizationName: "Arts Inter-Club Council")
                         
                     // EventCards horizontal stack formatting
                     }.padding(.leading, 40)
@@ -100,10 +100,10 @@ struct DiscoverView: View
                 VStack
                 {
                     // Four hard-coded 'Notification Items'
-                    NotificationItem(image: "envelope", text1: "New message from Anthony Rodriguez")
-                    NotificationItem(image: "gear", text1: "New theme available: Dark Theme")
-                    NotificationItem(image: "person.crop.circle.badge.plus", text1: "3 New subscribers")
-                    NotificationItem(image: "person.3", text1: "New club activity: SHPA Blood Drive")
+                    NotificationItem(icon: "envelope", message: "New message from Anthony Rodriguez")
+                    NotificationItem(icon: "gear", message: "New theme available: Dark Theme")
+                    NotificationItem(icon: "person.crop.circle.badge.plus", message: "3 New subscribers")
+                    NotificationItem(icon: "person.3", message: "New club activity: SHPA Blood Drive")
                           
                 // Notifications vertical stack formatting
                 }.padding(.horizontal, 25)
@@ -121,10 +121,10 @@ struct DiscoverView: View
 */
 struct EventItemCard : View
 {
-    var image : String  // Organization image
-    var text1 : String  // Day of the week
-    var text2 : String  // Event name
-    var text3 : String  // Organization name
+    var cardImage : String
+    var dayOfWeek : String
+    var eventName : String
+    var organizationName : String
     
     var body : some View
     {
@@ -134,9 +134,10 @@ struct EventItemCard : View
                     // ScrollView element texts
                     VStack(alignment: .leading)
                     {
-                        Text(text1).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
-                        Text(text2).font(.title).foregroundColor(Color.black)
-                        Text(text3).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
+                        Text(dayOfWeek).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
+                        
+                            Text(eventName).font(.title).foregroundColor(Color.black)
+                        Text(organizationName).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
                         
                     // ScrollView element texts formatting
                     }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -146,7 +147,7 @@ struct EventItemCard : View
                     {
                         Button (action:{
                         }){
-                            Image(image)
+                            Image(cardImage)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -168,17 +169,17 @@ struct EventItemCard : View
 */
 struct NotificationItem : View
 {
-    var image : String  // Notification icon
-    var text1 : String  // Notification message
+    var icon : String
+    var message : String
     
     var body : some View
     {
                 // Notification parent container
         return  HStack
                 {
-                    Image(systemName: image).font(.subheadline).frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
+                    Image(systemName: icon).font(.subheadline).frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
                     
-                    Text(text1).font(.subheadline)
+                    Text(message).font(.subheadline)
                     
                 // Notification parent container formatting
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading)
