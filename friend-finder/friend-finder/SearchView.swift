@@ -1,5 +1,5 @@
 //
-//  BlogView.swift
+//  SearchView.swift
 //
 //  Friend Finder, CPSC 362, M/W: 11:00am-12:50pm
 //  CSUF Fall 2019

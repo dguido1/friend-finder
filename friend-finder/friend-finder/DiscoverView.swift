@@ -1,5 +1,5 @@
 //
-//  AppsView.swift
+//  DiscoverView.swift
 //
 //  Friend Finder, CPSC 362, M/W: 11:00am-12:50pm
 //  CSUF Fall 2019
@@ -61,14 +61,14 @@ struct DiscoverView: View
                 // Secondary parent view (Makes left align & padding look correct)
                 HStack
                 {
-                    // Event Cards horizontal stack
+                    // EventCards horizontal stack
                     HStack
                     {
                         EventCard(image: "shpacsuf", text1: "TODAY", text2: "SHPA Blood Drive", text3: "Student Health Professions Association")
                         EventCard(image: "heatcsuf", text1: "SUNDAY", text2: "Sunday Service", text3: "Heat Campus Ministry")
                         EventCard(image: "aiccsuf", text1: "MONDAY", text2: "Council Meeting", text3: "Arts Inter-Club Council")
                         
-                    // Horizontal EventCards stack formatting
+                    // EventCards horizontal stack formatting
                     }.padding(.leading, 40)
                 }
                     
