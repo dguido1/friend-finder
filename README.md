@@ -11,7 +11,6 @@
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
 --- 
-<br><br>
 
 
  ## Table of contents
