@@ -1,7 +1,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
 
 # Friend Finder 
-### A native iOS application, linking together CSUF students
+### a Native iOS application built with SwiftUI.
+## It's time. Link-up with CSUF peers today.
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
 #### Created by:
@@ -10,7 +11,7 @@
 * Kayla Nguyen
 
 ## Overview
-#### Allows CSUF student users to:
+### Allows CSUF student users to:
 1. Access the application using CSUF domain credentials
 2. Create student or organization account using the following:
     * Username
@@ -32,9 +33,8 @@
 
 5. Search for clubs & organization events
 6. Maintain a student or organization profile 
-7. Send or receive notifications corresponding to subscribed content 
+7. Send or receive notifications corresponding to subscribed content with the ability to turn on/off in settings
 <br> <t> ie.   If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top right portion of any club-profile to start receiving notifications.
-* Ability to turn on/off in settings
 
 
 funtion example 
@@ -48,12 +48,13 @@ function test() {
 
 
 
+## Diagrams & Models
 
-## Use Case Diagram
+### Use Case Diagram
 ![FriendFinderUseCase05](https://user-images.githubusercontent.com/47490318/67425305-98d78b00-f58c-11e9-9b72-4964dbd861bc.png)
 
-## CRC Model 
+### CRC Model 
 ![CRC Modeling](https://user-images.githubusercontent.com/37362662/67426302-aaba2d80-f58e-11e9-931a-0e43150f76eb.png)
 
-## Activity Diagram 
+### Activity Diagram 
 ![ActivityDiagram-362 -  Blank UML](https://user-images.githubusercontent.com/26395400/67429213-8cefc700-f594-11e9-8406-022de4daeebb.png)
