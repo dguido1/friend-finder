@@ -64,9 +64,8 @@
 
 ### Custom Views
 
-#### Event Item Button
+### &nbsp;&nbsp;&nbsp;&nbsp;Event Item Button
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemButton.png" alt="alt text" width="400px" height="auto">
-
 
 ```swift
 struct EventItemButton : View
@@ -104,6 +103,139 @@ struct EventItemButton : View
 }
 ```
 
+
+### &nbsp;&nbsp;&nbsp;&nbsp;Event Item Card
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemCard.png" alt="alt text" width="250px" height="auto">
+
+```swift
+struct EventItemCard : View
+{
+    var cardImage : String
+    var dayOfWeek : String
+    var eventName : String
+    var organizationName : String
+    
+    var body : some View
+    {
+                // EventItemCard parent container
+        return  VStack
+                {
+                    // ScrollView element texts
+                    VStack(alignment: .leading)
+                    {
+                        Text(dayOfWeek).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
+                        
+                            Text(eventName).font(.title).foregroundColor(Color.black)
+                        Text(organizationName).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
+                        
+                    // ScrollView element texts formatting
+                    }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+                    // ScrollView button (image, mask, shadow)
+                    HStack
+                    {
+                        Button (action:{
+                        }){
+                            Image(cardImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                        }.buttonStyle(PlainButtonStyle())
+                        
+                        // Right arrow image
+                        Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)
+                    }
+                
+                // EventItemCard parent container formatting
+                }.frame(minHeight: 0, maxHeight: 276)
+    }
+}
+```
+
+
+
+
+### &nbsp;&nbsp;&nbsp;&nbsp;Notification Item
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/NotificationItem.png" alt="alt text" width="300px" height="auto">
+
+```swift
+struct NotificationItem : View
+{
+    var icon : String
+    var message : String
+    
+    var body : some View
+    {
+                // Notification parent container
+        return  HStack
+                {
+                    Image(systemName: icon).font(.subheadline).frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
+                    
+                    Text(message).font(.subheadline)
+                    
+                // Notification parent container formatting
+                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading)
+    }
+}
+```
+
+
+### &nbsp;&nbsp;&nbsp;&nbsp;Profile Info
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/ProfileInfo.png" alt="alt text" width="250px" height="auto">
+
+```swift
+struct ProfileInfo : View
+{
+    var profilePicture : String
+    var studentName : String
+    var studentCity : String
+    
+    var body : some View
+    {
+               // ProfileInfo parent container
+        return HStack
+               {
+                    ZStack
+                    {
+                        
+                        // Profile image overlay
+                        Image("ProfilePicOverlay01").resizable().aspectRatio(contentMode: .fit).shadow(radius: 40).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+
+                        // Profile image
+                        Image(profilePicture).resizable().aspectRatio(contentMode: .fit).overlay(RoundedRectangle(cornerRadius: 100).stroke(Color.blue, lineWidth: 15)).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity).aspectRatio(contentMode: .fit).frame(minHeight: 0, maxHeight: 100).cornerRadius(100).shadow(radius: 40)
+                        
+                    }.frame(minWidth: 0, maxWidth: 150, minHeight: 0, maxHeight: 175)
+            
+                    // Horizontal spacing
+                    Text("   ")
+                    
+                    // Profile title texts vertical stack
+                    VStack
+                    {
+                        Text (studentName).font(.title).fontWeight(.bold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        Text(studentCity).font(.subheadline).fontWeight(.medium).foregroundColor(.gray).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
+                        // Edit profile button
+                        Button(action:
+                        {
+                            
+                        }) {
+                            Text("Edit Profile").font(.subheadline).fontWeight(.medium).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).padding(.top, 3)
+                        }
+                    
+                    // Profile title texts vertical stack formatting
+                    }.frame(minWidth: 0, maxWidth: 175, alignment: .leading)
+                
+            // ProfileInfo parent container formatting
+        }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top)
+    }
+}
+```
+
+
+---
 
 ## Diagrams
 
