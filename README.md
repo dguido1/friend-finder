@@ -1,4 +1,6 @@
-# Friend Finder
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
+
+# Friend Finder 
 ### A native iOS application, linking together CSUF students
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
