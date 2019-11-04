@@ -1,4 +1,4 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/logos/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/logos/FriendFinderLogoColor.svg" alt="alt text" width="100px" height="auto">
 
 # Friend Finder
 ## It's time, link-up with CSUF peers now <br>
@@ -64,54 +64,42 @@
 
 ### Custom Views
 
-#### Event Item Card
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gyazo.com/aa46b3b231a908c65aeac00cfd57309a" alt="alt text" width="100x" height="auto">
-
+#### Event Item Button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemButton.png" alt="alt text" width="400px" height="auto">
 
 
 ```swift
-struct EventItemCard : View
+struct EventItemButton : View
 {
-    var cardImage : String
-    var dayOfWeek : String
-    var eventName : String
-    var organizationName : String
-    
+    var iconColor : Color
+    var eventIcon : String
+    var nameText : String
+    var dateText : String
+    var likesText : String
+
     var body : some View
     {
-                // EventItemCard parent container
-        return  VStack
+                // EventItemButton parent container
+        return  Button(action:
+                {})
                 {
-                    // ScrollView element texts
-                    VStack(alignment: .leading)
-                    {
-                        Text(dayOfWeek).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
-                        
-                            Text(eventName).font(.title).foregroundColor(Color.black)
-                        Text(organizationName).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
-                        
-                    // ScrollView element texts formatting
-                    }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
-                    // ScrollView button (image, mask, shadow)
                     HStack
                     {
-                        Button (action:{
-                        }){
-                            Image(cardImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .cornerRadius(10)
-                                .shadow(radius: 10)
-                        }.buttonStyle(PlainButtonStyle())
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                             .fill(iconColor)
+                            .frame(width: 30, height: 30).overlay(Image(systemName: eventIcon).font(.footnote).foregroundColor(Color.white))
                         
-                        // Right arrow image
-                        Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)
-                    }
-                
-                // EventItemCard parent container formatting
-                }.frame(minHeight: 0, maxHeight: 276)
+                        VStack
+                        {
+                            Text(nameText).font(.subheadline).foregroundColor(Color.black).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).aspectRatio(contentMode: .fill)
+                            Text(dateText).font(.subheadline).foregroundColor(Color.gray).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        }
+                        
+                        Text (likesText).font(.subheadline).foregroundColor(Color.gray)
+                        
+                    // EventItemButton parent container formatting
+                    }.frame(minWidth: 0, maxWidth: 350, minHeight: 0, maxHeight: 45, alignment: Alignment.leading)
+                }
     }
 }
 ```
