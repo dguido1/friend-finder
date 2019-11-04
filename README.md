@@ -20,12 +20,14 @@
   * [Diagrams](#diagrams)
   * [Resources](#resources)
 <br>
+<br>
 
 ***
 
+<br>
+<br>
 
-
-## Overview
+# Overview
 ### Allows CSUF student users to:
 1. Access the application using CSUF domain credentials
 2. Create student or organization account using the following:
@@ -50,17 +52,26 @@
 6. Maintain a student or organization profile 
 7. Send or receive notifications corresponding to subscribed content with the ability to turn on/off in settings
 <br> <t> ie.   If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top right portion of any club-profile to start receiving notifications.
+<br>
+<br>
 
+***
 
----
+<br>
+<br>
 
-## Design
+# Design
 
 #### [AdobeXD Wireframe Link](https://xd.adobe.com/spec/25829805-09c1-433d-7d73-c29368a3b5de-53b3/)
+<br>
+<br>
 
----
+***
 
-## Development
+<br>
+<br>
+
+# Development
 
 ### Custom Views
 
@@ -233,11 +244,55 @@ struct ProfileInfo : View
     }
 }
 ```
+<br>
+<br>
 
+***
 
----
+<br>
+<br>
 
-## Diagrams
+# Resources
+
+1.   [SwiftUI Docs (Apple)](https://developer.apple.com/documentation/swiftui)
+
+2.   [FuckingSwiftUI](https://fuckingswiftui.com/) or it's [non-explicit mirror](https://goshdarnswiftui.com/)
+     * Best examples of SwiftUI components. Site's really awesome.<br>&nbsp;&nbsp;&nbsp;i.e.<br><br>
+       Text:
+
+        ```Swift
+        Text("Hello World")
+        Text("Hello World").bold().italic().underline().lineLimit(2)
+        Text("Hello ") + Text("World!").bold()
+        Text("Hello\nWorld!").multilineTextAlignment(.center)
+        ```
+       Horizontal Stack:
+        ```Swift
+        HStack (alignment: .center, spacing: 20)
+        {
+           Text("Hello")
+           Divider()
+           Text("World")
+        }
+        ```
+       Vertical Stack:  
+        ```Swift
+        VStack (alignment: .center, spacing: 20)
+        {
+            Text("Hello")
+            Divider()
+            Text("World")
+        }
+        ```
+<br>
+<br>
+
+***
+
+<br>
+<br>
+
+# Diagrams
 
 ### Use Case Diagram
 ![FriendFinderUseCase05](https://user-images.githubusercontent.com/47490318/67425305-98d78b00-f58c-11e9-9b72-4964dbd861bc.png)
@@ -247,9 +302,3 @@ struct ProfileInfo : View
 
 ### Activity Diagram 
 ![ActivityDiagram-362 -  Blank UML](https://user-images.githubusercontent.com/26395400/67429213-8cefc700-f594-11e9-8406-022de4daeebb.png)
-
-
-
----
-
-## Resources
