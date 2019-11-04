@@ -20,8 +20,8 @@
   * [Overview](#overview)
   * [Design](#design)
   * [Development](#development)
-  * [Diagrams](#diagrams)
   * [Resources](#resources)
+  * [Diagrams](#diagrams)
 
 <br>
 
