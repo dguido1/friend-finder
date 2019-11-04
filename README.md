@@ -1,4 +1,4 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/logos/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
 
 # Friend Finder
 ## It's time, link-up with CSUF peers now <br>
@@ -14,7 +14,6 @@
 <br>
 
  ## Table of contents
-* [Friend Finder](#friendfinder)
   * [Overview](#overview)
   * [Design](#design)
   * [Development](#development)
@@ -57,17 +56,63 @@
 
 ## Design
 
+#### [AdobeXD Wireframe Link](https://xd.adobe.com/spec/25829805-09c1-433d-7d73-c29368a3b5de-53b3/)
 
 ---
 
 ## Development
 
+### Custom Views
 
-funtion example 
+#### Event Item Card
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gyazo.com/aa46b3b231a908c65aeac00cfd57309a" alt="alt text" width="100x" height="auto">
 
-```javascript
-function test() {
- console.log("look ma’, no spaces");
+
+
+```swift
+struct EventItemCard : View
+{
+    var cardImage : String
+    var dayOfWeek : String
+    var eventName : String
+    var organizationName : String
+    
+    var body : some View
+    {
+                // EventItemCard parent container
+        return  VStack
+                {
+                    // ScrollView element texts
+                    VStack(alignment: .leading)
+                    {
+                        Text(dayOfWeek).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
+                        
+                            Text(eventName).font(.title).foregroundColor(Color.black)
+                        Text(organizationName).font(.subheadline).fontWeight(.medium).foregroundColor(.gray)
+                        
+                    // ScrollView element texts formatting
+                    }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+                    // ScrollView button (image, mask, shadow)
+                    HStack
+                    {
+                        Button (action:{
+                        }){
+                            Image(cardImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .cornerRadius(10)
+                                .shadow(radius: 10)
+                        }.buttonStyle(PlainButtonStyle())
+                        
+                        // Right arrow image
+                        Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)
+                    }
+                
+                // EventItemCard parent container formatting
+                }.frame(minHeight: 0, maxHeight: 276)
+    }
 }
 ```
 
