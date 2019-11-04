@@ -8,8 +8,8 @@
 * Kayla Nguyen
 
 ## Overview
-- Design & develop a native iOS mobile application, allowing CSUF student users to:
-1. Access the application using CSUF domain credentials:
+#### Allows CSUF student users to:
+1. Access the application using CSUF domain credentials
 2. Create student or organization account using the following:
     * Username
     * PW
@@ -17,7 +17,7 @@
     * First name, Last name
     * Major
     * CWID
-3. Log-in using a previously created student or organization account.
+3. Log-in using a previously created student or organization account
 4. Create event:
     * Student Pick-Up Group 
     	* Study group
