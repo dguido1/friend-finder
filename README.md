@@ -183,7 +183,7 @@ struct NotificationItem : View
 
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;Profile Info
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/ProfileInfo.png" alt="alt text" width="250px" height="auto">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/ProfileInfo.png" alt="alt text" width="350px" height="auto">
 
 ```swift
 struct ProfileInfo : View
