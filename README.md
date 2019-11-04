@@ -10,7 +10,10 @@
 * Kayla Nguyen
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
+<br>
+
 --- 
+
 <br>
 
  ## Table of contents
@@ -19,7 +22,7 @@
   * [Development](#development)
   * [Diagrams](#diagrams)
   * [Resources](#resources)
-<br>
+
 <br>
 
 ***
@@ -52,7 +55,7 @@
 6. Maintain a student or organization profile 
 7. Send or receive notifications corresponding to subscribed content with the ability to turn on/off in settings
 <br> <t> ie.   If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top right portion of any club-profile to start receiving notifications.
-<br>
+
 <br>
 
 ***
@@ -63,7 +66,7 @@
 # Design
 
 #### [AdobeXD Wireframe Link](https://xd.adobe.com/spec/25829805-09c1-433d-7d73-c29368a3b5de-53b3/)
-<br>
+
 <br>
 
 ***
@@ -73,9 +76,9 @@
 
 # Development
 
-### Custom Views
+## Custom Views
 
-### &nbsp;&nbsp;&nbsp;&nbsp;Event Item Button
+### &nbsp;&nbsp;&nbsp;&nbsp;**Event Item Button**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemButton.png" alt="alt text" width="400px" height="auto">
 
 ```swift
@@ -114,8 +117,9 @@ struct EventItemButton : View
 }
 ```
 
+<br>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;Event Item Card
+### &nbsp;&nbsp;&nbsp;&nbsp;**Event Item Card**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemCard.png" alt="alt text" width="250px" height="auto">
 
 ```swift
@@ -165,10 +169,9 @@ struct EventItemCard : View
 }
 ```
 
+<br>
 
-
-
-### &nbsp;&nbsp;&nbsp;&nbsp;Notification Item
+### &nbsp;&nbsp;&nbsp;&nbsp;**Notification Item**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/NotificationItem.png" alt="alt text" width="300px" height="auto">
 
 ```swift
@@ -192,8 +195,9 @@ struct NotificationItem : View
 }
 ```
 
+<br>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;Profile Info
+### &nbsp;&nbsp;&nbsp;&nbsp;**Profile Info**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/ProfileInfo.png" alt="alt text" width="350px" height="auto">
 
 ```swift
@@ -244,7 +248,7 @@ struct ProfileInfo : View
     }
 }
 ```
-<br>
+
 <br>
 
 ***
@@ -284,7 +288,6 @@ struct ProfileInfo : View
             Text("World")
         }
         ```
-<br>
 <br>
 
 ***
