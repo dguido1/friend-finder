@@ -3,7 +3,7 @@
 # Friend Finder
 ## It's time, link-up with CSUF peers now <br>
 
-### a Native iOS application built with ***[SwiftUI](https://developer.apple.com/xcode/swiftui/)SwiftUI***
+### a Native iOS application built with ***[SwiftUI](https://developer.apple.com/xcode/swiftui/)***
 #### Created by:
 * David Guido
 * Pierce Findlay
