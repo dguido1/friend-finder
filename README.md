@@ -1,8 +1,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
 
 # Friend Finder 
+## It's time, link-up with CSUF peers now <br>
+
 ### a Native iOS application built with SwiftUI
-## It's time, link-up with CSUF peers now
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
 #### Created by:
