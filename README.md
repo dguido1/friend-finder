@@ -1,15 +1,30 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/FriendFinderLogoColor.svg" alt="alt text" width="100x" height="auto">
 
-# Friend Finder 
+# Friend Finder
 ## It's time, link-up with CSUF peers now <br>
 
 ### a Native iOS application built with SwiftUI
-
-#### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
 #### Created by:
 * David Guido
 * Pierce Findlay
 * Kayla Nguyen
+
+#### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
+--- 
+<br><br>
+
+
+ ## Table of contents
+* [Friend Finder](#friendfinder)
+  * [Overview](#overview)
+  * [Design](#design)
+  * [Development](#development)
+  * [Diagrams](#diagrams)
+  * [Resources](#resources)
+***
+<br/><br/><br/>
+
+
 
 ## Overview
 ### Allows CSUF student users to:
@@ -38,6 +53,16 @@
 <br> <t> ie.   If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top right portion of any club-profile to start receiving notifications.
 
 
+---
+
+## Design
+
+
+---
+
+## Development
+
+
 funtion example 
 
 ```javascript
@@ -47,9 +72,7 @@ function test() {
 ```
 
 
-
-
-## Diagrams & Models
+## Diagrams
 
 ### Use Case Diagram
 ![FriendFinderUseCase05](https://user-images.githubusercontent.com/47490318/67425305-98d78b00-f58c-11e9-9b72-4964dbd861bc.png)
@@ -59,3 +82,9 @@ function test() {
 
 ### Activity Diagram 
 ![ActivityDiagram-362 -  Blank UML](https://user-images.githubusercontent.com/26395400/67429213-8cefc700-f594-11e9-8406-022de4daeebb.png)
+
+
+
+---
+
+## Resources
