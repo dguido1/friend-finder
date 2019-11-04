@@ -11,7 +11,7 @@
 
 #### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
 --- 
-
+<br>
 
  ## Table of contents
 * [Friend Finder](#friendfinder)
@@ -20,8 +20,9 @@
   * [Development](#development)
   * [Diagrams](#diagrams)
   * [Resources](#resources)
+<br>
+
 ***
-<br/><br/><br/>
 
 
 
