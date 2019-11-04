@@ -1,4 +1,11 @@
-# friend-finder
+# Friend Finder
+### A native iOS application, linking together CSUF students
+
+#### CPSC 362, M/W: 11:00am-12:50pm <br> Fall 2019 
+#### Created by:
+* David Guido
+* Pierce Findlay
+* Kayla Nguyen
 
 ## Overview
 - Design & develop a native iOS mobile application, allowing CSUF student users to:
@@ -11,20 +18,21 @@
     * Major
     * CWID
 3. Log-in using a previously created student or organization account.
+4. Create event:
+    * Student Pick-Up Group 
+    	* Study group
+    	* Meet location
+<br> <t> ie.   Car-pool parking location, club giveaways
+    * Organization Event
+    	* Blood drive
+    	* New faculty location
+    	* Weekly club meetings
 
-Create event:
-Pick-up group 
-Study group
-Meet location
-Ie.   Car-pool parking location, club giveaways
-Organization Event
-		Ie.   Blood drive, new faculty location, weekly club meetings
-Search for clubs & organization events
-Maintain a student or organization profile 
-Send or receive notifications corresponding to subscribed content 
-If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top 
-right portion of any club-profile to start receiving notifications.
-Ability to turn on/off in settings
+5. Search for clubs & organization events
+6. Maintain a student or organization profile 
+7. Send or receive notifications corresponding to subscribed content 
+<br> <t> ie.   If a student wishes to receive new information regarding a club or organization on campus, they can simply select ‘subscribe’ on the top right portion of any club-profile to start receiving notifications.
+* Ability to turn on/off in settings
 
 
 funtion example 
