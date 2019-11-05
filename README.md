@@ -249,6 +249,33 @@ struct ProfileInfo : View
 }
 ```
 
+---
+
+<br>
+
+## Database
+
+### Notes:
+1. Added friend-finder relational database to Google Firebase account (davidguido@litlabproductions.com)
+   * Currently in test mode, not production
+2. Added rules to dashboard compiler
+   * Allows user access to only their own data
+
+        ```
+        {
+          "rules": {
+            "$uid": {
+              ".write": "$uid === auth.uid",
+              ".read": "$uid === auth.uid"
+           }
+         }
+        }
+        ```
+
+3. Added **plist** file from Firebase to xCode project
+
+
+### 
 <br>
 
 ***
