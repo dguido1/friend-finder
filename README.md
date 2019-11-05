@@ -47,9 +47,7 @@
     	* Meet location
 <br> <t> ie.   Car-pool parking location, club giveaways
     * Organization Event
-    	* Blood drive
-    	* New faculty location
-    	* Weekly club meetings
+    	* i.e. Blood drive, New faculty location, Weekly club meetings
 
 5. Search for clubs & organization events
 6. Maintain a student or organization profile 
