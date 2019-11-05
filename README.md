@@ -11,11 +11,11 @@
       * Google Account & Support email: **davidguido@litlabproductions.com**
  
     Note: Currently in test mode, not production<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically universal access, less secure but easier to test<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically universal access, less secure but easier to test<br><br>
               
  
 2. Added rules to dashboard compiler
-      * Allows user access to only their own data, providing minimum security temporarily
+      * Allows user access to only their own data, providing minimum security while testing
 
         ```
         {
@@ -40,13 +40,29 @@
      2. Download / import ***plist*** file
      3. Add Firebase SDK:
         1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) (Provides a standard format for managing external libraries)
+            * Provides a standard format for managing external libraries
         
             ```console
             sudo gem install cocoapods
             ```
 
+        2. Open project folder in terminal, then create pod file using:
         
-     4. asd
+            ```console
+            pod init
+            ```
+        
+        3. Open file in text editor and add this script: 
+            
+            ```
+            # add the Firebase pod for Google Analytics
+            pod 'Firebase/Analytics'
+            
+            # add pods for any other desired Firebase products
+            # https://firebase.google.com/docs/ios/setup#available-pods
+            ``` 
+            
+        4. From now on, open ***friend-finder.xcworkspace*** instead of normal xCode project
 
        
    
