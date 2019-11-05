@@ -1,3 +1,62 @@
+### Notes:
+
+1. Created Google Firebase relational-database
+
+   * Project Settings:
+      * Project name: **friend-finder**
+      * Project ID: **friend-finder-csuf**
+      * Google Cloud Platform resource location: **us-west2**
+      * Web API Key: **AIzaSyCRB5UJgWUdkNsBF0azsSSMoOHiU6F6qVo**
+      * Public-facing name: **friend-finder-csuf**
+      * Google Account & Support email: **davidguido@litlabproductions.com**
+ 
+    Note: Currently in test mode, not production<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically universal access, less secure but easier to test<br>
+              
+ 
+2. Added rules to dashboard compiler
+      * Allows user access to only their own data, providing minimum security temporarily
+
+        ```
+        {
+          "rules": {
+            "$uid": {
+              ".write": "$uid === auth.uid",
+              ".read": "$uid === auth.uid"
+           }
+         }
+        }
+        ```
+        
+<br>
+ 
+ 
+3. Added Firebase to iOS Application
+      * Adds Firebase libraries to project so we can access them
+      * Contains endpoint and configuration data
+
+   Steps:
+     1. Registered App using **Bundle ID:** ***com.csuf.friend-finder***
+     2. Download / import ***plist*** file
+     3. Add Firebase SDK:
+        1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) (Provides a standard format for managing external libraries)
+        
+            ```console
+            sudo gem install cocoapods
+            ```
+
+        
+     4. asd
+
+       
+   
+<br>
+4. 
+
+
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/logos/FriendFinderLogoColor.svg" alt="alt text" width="100px" height="auto">
 
 # Friend Finder
@@ -255,24 +314,6 @@ struct ProfileInfo : View
 
 ## Database
 
-### Notes:
-1. Added friend-finder relational database to Google Firebase account (davidguido@litlabproductions.com)
-   * Currently in test mode, not production
-2. Added rules to dashboard compiler
-   * Allows user access to only their own data
-
-        ```
-        {
-          "rules": {
-            "$uid": {
-              ".write": "$uid === auth.uid",
-              ".read": "$uid === auth.uid"
-           }
-         }
-        }
-        ```
-
-3. Added **plist** file from Firebase to xCode project
 
 
 ### 
