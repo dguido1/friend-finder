@@ -62,12 +62,27 @@
             # https://firebase.google.com/docs/ios/setup#available-pods
             ``` 
             
-        4. From now on, open ***friend-finder.xcworkspace*** instead of normal xCode project
+        4. From now on,<br>Open: ***friend-finder.xcworkspace***<br>Instead of normal xCode project: ***friend-finder.xcodeproj***
 
-       
+        5. 
+        6. 
+        7. 
+        8. 
+         
    
 <br>
-4. 
+     4. A
+<br>
+     5. A
+<br>
+     6. A
+<br>
+     7. A
+<br>
+     8. A
+<br>
+     9. A
+<br>
 
 
 
