@@ -1,3 +1,93 @@
+### Notes:
+
+1. Created Google Firebase relational-database
+
+   * Project Settings:
+      * Project name: **friend-finder**
+      * Project ID: **friend-finder-csuf**
+      * Google Cloud Platform resource location: **us-west2**
+      * Web API Key: **AIzaSyCRB5UJgWUdkNsBF0azsSSMoOHiU6F6qVo**
+      * Public-facing name: **friend-finder-csuf**
+      * Google Account & Support email: **davidguido@litlabproductions.com**
+ 
+    Note: Currently in test mode, not production<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basically universal access, less secure but easier to test<br><br>
+              
+ 
+2. Added rules to dashboard compiler
+      * Allows user access to only their own data, providing minimum security while testing
+
+        ```
+        {
+          "rules": {
+            "$uid": {
+              ".write": "$uid === auth.uid",
+              ".read": "$uid === auth.uid"
+           }
+         }
+        }
+        ```
+        
+<br>
+ 
+ 
+3. Added Firebase to iOS Application
+      * Adds Firebase libraries to project so we can access them
+      * Contains endpoint and configuration data
+
+   Steps:
+     1. Registered App using **Bundle ID:** ***com.csuf.friend-finder***
+     2. Download / import ***plist*** file
+     3. Add Firebase SDK:
+        1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) (Provides a standard format for managing external libraries)
+            * Provides a standard format for managing external libraries
+        
+            ```console
+            sudo gem install cocoapods
+            ```
+
+        2. Open project folder in terminal, then create pod file using:
+        
+            ```console
+            pod init
+            ```
+        
+        3. Open file in text editor and add this script: 
+            
+            ```
+            # add the Firebase pod for Google Analytics
+            pod 'Firebase/Analytics'
+            
+            # add pods for any other desired Firebase products
+            # https://firebase.google.com/docs/ios/setup#available-pods
+            ``` 
+            
+        4. From now on,<br>Open: ***friend-finder.xcworkspace***<br>Instead of normal xCode project: ***friend-finder.xcodeproj***
+
+        5. 
+        6. 
+        7. 
+        8. 
+         
+   
+<br>
+     4. A
+<br>
+     5. A
+<br>
+     6. A
+<br>
+     7. A
+<br>
+     8. A
+<br>
+     9. A
+<br>
+
+
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/logos/FriendFinderLogoColor.svg" alt="alt text" width="100px" height="auto">
 
 # Friend Finder
@@ -249,6 +339,15 @@ struct ProfileInfo : View
 }
 ```
 
+---
+
+<br>
+
+## Database
+
+
+
+### 
 <br>
 
 ***
