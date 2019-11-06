@@ -416,3 +416,6 @@ struct ProfileInfo : View
 
 ### Activity Diagram 
 ![ActivityDiagram-362 -  Blank UML](https://user-images.githubusercontent.com/26395400/67429213-8cefc700-f594-11e9-8406-022de4daeebb.png)
+
+### Database ER Diagram 
+![Database ER Diagram Example (Crow's Foot)](https://user-images.githubusercontent.com/47490318/68322144-c0901e00-0077-11ea-9d84-b61cef44ffc4.png)
