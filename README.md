@@ -404,5 +404,8 @@ struct ProfileInfo : View
 ### Database ER Diagram 
 ![Database ER Diagram Example (Crow's Foot)](https://user-images.githubusercontent.com/47490318/68322144-c0901e00-0077-11ea-9d84-b61cef44ffc4.png)
 
+### State Diagram
+![UML State Machine Diagram Example](https://user-images.githubusercontent.com/26395400/68331214-74e67000-0089-11ea-804d-793baa51190a.png)
+
 ### Sequence Diagram
 ![User Sequence Diagram](https://user-images.githubusercontent.com/26395400/68330478-32706380-0088-11ea-830a-838cfb08ad93.png)
