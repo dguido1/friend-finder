@@ -74,7 +74,15 @@
 
 # Development
 
-## Custom Views
+### &nbsp;&nbsp;&nbsp;&nbsp;**Current State**
+<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-in-still.png" alt="alt text" width="400px" height="auto">
+
+<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-In00.gif" alt="alt text" width="400px" height="auto">
+
+<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-In01.gif" alt="alt text" width="400px" height="auto">
+
+
+## Custom Views (SwiftUI)
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;**Event Item Button**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/images/view-examples/EventItemButton.png" alt="alt text" width="400px" height="auto">
@@ -333,30 +341,6 @@ struct ProfileInfo : View
                   }
             ```
             
-        6. 
-        
-        
-        7. 
-        8. 
-         
-   
-<br>
-     4. A
-<br>
-     5. A
-<br>
-     6. A
-<br>
-     7. A
-<br>
-     8. A
-<br>
-     9. A
-<br>
-
-
-
-
 
 
 ### 
@@ -420,10 +404,5 @@ struct ProfileInfo : View
 ### Database ER Diagram 
 ![Database ER Diagram Example (Crow's Foot)](https://user-images.githubusercontent.com/47490318/68322144-c0901e00-0077-11ea-9d84-b61cef44ffc4.png)
 
-### State Diagram
-![UML State Machine Diagram Example](https://user-images.githubusercontent.com/26395400/68331214-74e67000-0089-11ea-804d-793baa51190a.png)
-
 ### Sequence Diagram
 ![User Sequence Diagram](https://user-images.githubusercontent.com/26395400/68330478-32706380-0088-11ea-830a-838cfb08ad93.png)
-
-
