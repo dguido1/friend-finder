@@ -302,7 +302,7 @@ struct ProfileInfo : View
      1. Registered App using **Bundle ID:** ***com.csuf.friend-finder***
      2. Download / import ***plist*** file
      3. Add Firebase SDK:
-        1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) (Provides a standard format for managing external libraries)
+        1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
             * Provides a standard format for managing external libraries
         
             ```console
