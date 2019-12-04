@@ -1,10 +1,10 @@
 //
 //  SceneDelegate.swift
+//  TODO
 //
-//  Friend Finder, CPSC 362, M/W: 11:00am-12:50pm
-//  CSUF Fall 2019
+//  Created by Sebastian Esser on 9/18/19.
+//  Copyright © 2019 Sebastian Esser. All rights reserved.
 //
-//  Created by David Guido, Pierce Findlay & Kayla Nguyen on 11/01/2019.
 
 import UIKit
 import SwiftUI
@@ -21,11 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
+        
+        //Firebase
+        let session = FirebaseSession()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(session))
             self.window = window
             window.makeKeyAndVisible()
         }

@@ -20,6 +20,14 @@
 		A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F623322DC500BC7537 /* CreateView.swift */; };
 		BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB38442B237168B300243ED5 /* GoogleService-Info.plist */; };
 		BB38443323719BAD00243ED5 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443223719BAD00243ED5 /* LandingView.swift */; };
+		BB38443523719EA400243ED5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443423719EA400243ED5 /* User.swift */; };
+		BB38443923719FA700243ED5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443823719FA700243ED5 /* Event.swift */; };
+		BB38443B2371A02400243ED5 /* PickUpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443A2371A02400243ED5 /* PickUpEvent.swift */; };
+		BB3844432372480D00243ED5 /* FirebaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3844422372480D00243ED5 /* FirebaseSession.swift */; };
+		BB38444923728A4600243ED5 /* Somatic-Rounded.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB38444823728A4600243ED5 /* Somatic-Rounded.otf */; };
+		BB704BE62397826500858B44 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB704BE52397826500858B44 /* SignUpView.swift */; };
+		BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BB704BE72397D27200858B44 /* ContentBackup.rtf */; };
+		BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */; };
 		FC81FE494203023D4D36696B /* Pods_friend_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +47,16 @@
 		A1F7A6F423322DC500BC7537 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1F7A6F523322DC500BC7537 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A1F7A6F623322DC500BC7537 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
-		BB38442A236F8B6F00243ED5 /* events.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = events.geojson; sourceTree = "<group>"; };
 		BB38442B237168B300243ED5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB38443223719BAD00243ED5 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		BB38443423719EA400243ED5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BB38443823719FA700243ED5 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BB38443A2371A02400243ED5 /* PickUpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpEvent.swift; sourceTree = "<group>"; };
+		BB3844422372480D00243ED5 /* FirebaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSession.swift; sourceTree = "<group>"; };
+		BB38444823728A4600243ED5 /* Somatic-Rounded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Somatic-Rounded.otf"; path = "../../../../CSUF/CPSC/CPSC362/FriendFinder/Database/plist/Somatic-Rounded.otf"; sourceTree = "<group>"; };
+		BB704BE52397826500858B44 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BB704BE72397D27200858B44 /* ContentBackup.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ContentBackup.rtf; sourceTree = "<group>"; };
+		BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPickupEventView.swift; sourceTree = "<group>"; };
 		D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friend_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +92,7 @@
 		A1F7A6D223322CFF00BC7537 = {
 			isa = PBXGroup;
 			children = (
+				BB704BE72397D27200858B44 /* ContentBackup.rtf */,
 				A1F7A6DD23322CFF00BC7537 /* friend-finder */,
 				A1F7A6DC23322CFF00BC7537 /* Products */,
 				2EB6844EF3D11E5994466DF2 /* Pods */,
@@ -95,15 +111,22 @@
 		A1F7A6DD23322CFF00BC7537 /* friend-finder */ = {
 			isa = PBXGroup;
 			children = (
+				BB38444823728A4600243ED5 /* Somatic-Rounded.otf */,
+				BB384444237287D300243ED5 /* Fonts */,
 				A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */,
 				BB38443223719BAD00243ED5 /* LandingView.swift */,
-				A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */,
+				BB704BE52397826500858B44 /* SignUpView.swift */,
+				BB38443423719EA400243ED5 /* User.swift */,
+				BB38443823719FA700243ED5 /* Event.swift */,
 				A1F7A6E223322CFF00BC7537 /* ContentView.swift */,
+				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
+				BB3844422372480D00243ED5 /* FirebaseSession.swift */,
+				BB38443A2371A02400243ED5 /* PickUpEvent.swift */,
+				BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */,
+				A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */,
 				A1F7A6F323322DC500BC7537 /* DiscoverView.swift */,
 				A1F7A6F623322DC500BC7537 /* CreateView.swift */,
-				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
 				A1F7A6F523322DC500BC7537 /* ProfileView.swift */,
-				BB38442A236F8B6F00243ED5 /* events.geojson */,
 				A1F7A6F423322DC500BC7537 /* Constants.swift */,
 				A1F7A6E423322D0200BC7537 /* Assets.xcassets */,
 				A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */,
@@ -120,6 +143,13 @@
 				A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB384444237287D300243ED5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */,
 				A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */,
+				BB38444923728A4600243ED5 /* Somatic-Rounded.otf in Resources */,
 				BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */,
 				A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */,
 				A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */,
@@ -238,14 +270,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB38443B2371A02400243ED5 /* PickUpEvent.swift in Sources */,
 				BB38443323719BAD00243ED5 /* LandingView.swift in Sources */,
 				A1F7A6F723322DC500BC7537 /* SearchView.swift in Sources */,
 				A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */,
+				BB704BE62397826500858B44 /* SignUpView.swift in Sources */,
+				BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */,
 				A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */,
+				BB38443923719FA700243ED5 /* Event.swift in Sources */,
 				A1F7A6E123322CFF00BC7537 /* SceneDelegate.swift in Sources */,
 				A1F7A6F823322DC600BC7537 /* DiscoverView.swift in Sources */,
 				A1F7A6E323322CFF00BC7537 /* ContentView.swift in Sources */,
 				A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */,
+				BB38443523719EA400243ED5 /* User.swift in Sources */,
+				BB3844432372480D00243ED5 /* FirebaseSession.swift in Sources */,
 				A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
