@@ -10,8 +10,7 @@ import UIKit
 
 struct Constants {
     
-    struct TabBarImageName
-    {
+    struct TabBarImageName {
         static let tabBar0 = "person.3"
         static let tabBar1 = "square.and.pencil"
         static let tabBar2 = "magnifyingglass"
