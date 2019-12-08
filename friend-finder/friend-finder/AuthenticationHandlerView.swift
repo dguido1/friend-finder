@@ -73,6 +73,12 @@
                                         Text("Sign-In")
                                     }.padding(.top, 10)
                                     
+                                    Button (action: {
+                                        self.devSignIn()
+                                    }){
+                                        Text("Development Sign-In")
+                                    }.padding(.top, 10)
+                                    
                                 }.padding(.bottom, 150).foregroundColor(Color.white).opacity(0.8)
                                 
                                 Button(action: {
@@ -168,6 +174,10 @@
                     self.signInSuccess = true
                 }
             }
+        }
+        
+        func devSignIn() {
+            self.signInSuccess = true
         }
         
         func toSignUp() {
