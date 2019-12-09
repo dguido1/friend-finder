@@ -18,19 +18,18 @@
 		A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F423322DC500BC7537 /* Constants.swift */; };
 		A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F523322DC500BC7537 /* ProfileView.swift */; };
 		A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F623322DC500BC7537 /* CreateView.swift */; };
+		BB086375239DF59700C4886B /* ColoredToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB086374239DF59700C4886B /* ColoredToggleStyle.swift */; };
+		BB086377239DF62200C4886B /* Somatic-Rounded.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB086376239DF62200C4886B /* Somatic-Rounded.otf */; };
 		BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB38442B237168B300243ED5 /* GoogleService-Info.plist */; };
 		BB38443523719EA400243ED5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443423719EA400243ED5 /* User.swift */; };
 		BB38443923719FA700243ED5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443823719FA700243ED5 /* Event.swift */; };
 		BB38443B2371A02400243ED5 /* PickUpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443A2371A02400243ED5 /* PickUpEvent.swift */; };
 		BB3844432372480D00243ED5 /* FirebaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3844422372480D00243ED5 /* FirebaseSession.swift */; };
-		BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BB704BE72397D27200858B44 /* ContentBackup.rtf */; };
 		BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */; };
 		BB874330239BBF5600DFD2F9 /* AuthenticationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */; };
 		BB874332239BBFDE00DFD2F9 /* NavBarStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */; };
 		BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63C239D100E0098367A /* BlueToggle.swift */; };
 		BB8EE63F239D10560098367A /* GreenToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63E239D10560098367A /* GreenToggle.swift */; };
-		BB8EE643239D115F0098367A /* ColoredToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */; };
-		BB8EE646239DD89B0098367A /* Somatic-Rounded.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB8EE645239DD89B0098367A /* Somatic-Rounded.otf */; };
 		FC81FE494203023D4D36696B /* Pods_friend_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,19 +49,18 @@
 		A1F7A6F423322DC500BC7537 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1F7A6F523322DC500BC7537 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A1F7A6F623322DC500BC7537 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		BB086374239DF59700C4886B /* ColoredToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredToggleStyle.swift; sourceTree = "<group>"; };
+		BB086376239DF62200C4886B /* Somatic-Rounded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Somatic-Rounded.otf"; sourceTree = "<group>"; };
 		BB38442B237168B300243ED5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB38443423719EA400243ED5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BB38443823719FA700243ED5 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BB38443A2371A02400243ED5 /* PickUpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpEvent.swift; sourceTree = "<group>"; };
 		BB3844422372480D00243ED5 /* FirebaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSession.swift; sourceTree = "<group>"; };
-		BB704BE72397D27200858B44 /* ContentBackup.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ContentBackup.rtf; sourceTree = "<group>"; };
 		BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPickupEventView.swift; sourceTree = "<group>"; };
 		BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHandlerView.swift; sourceTree = "<group>"; };
 		BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarStateView.swift; sourceTree = "<group>"; };
 		BB8EE63C239D100E0098367A /* BlueToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToggle.swift; sourceTree = "<group>"; };
 		BB8EE63E239D10560098367A /* GreenToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenToggle.swift; sourceTree = "<group>"; };
-		BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColoredToggleStyle.swift; path = "/Users/dguido/Documents/GitHub/friend-finder/friend-finder/friend-finder/ColoredToggleStyle.swift"; sourceTree = "<absolute>"; };
-		BB8EE645239DD89B0098367A /* Somatic-Rounded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Somatic-Rounded.otf"; path = "plist/Somatic-Rounded.otf"; sourceTree = SOURCE_ROOT; };
 		D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friend_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 		A1F7A6D223322CFF00BC7537 = {
 			isa = PBXGroup;
 			children = (
-				BB704BE72397D27200858B44 /* ContentBackup.rtf */,
 				A1F7A6DD23322CFF00BC7537 /* friend-finder */,
 				A1F7A6DC23322CFF00BC7537 /* Products */,
 				2EB6844EF3D11E5994466DF2 /* Pods */,
@@ -117,7 +114,6 @@
 		A1F7A6DD23322CFF00BC7537 /* friend-finder */ = {
 			isa = PBXGroup;
 			children = (
-				BB8EE645239DD89B0098367A /* Somatic-Rounded.otf */,
 				BB384444237287D300243ED5 /* Fonts */,
 				A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */,
 				BB38443423719EA400243ED5 /* User.swift */,
@@ -126,10 +122,10 @@
 				BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */,
 				BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */,
 				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
-				BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */,
 				BB3844422372480D00243ED5 /* FirebaseSession.swift */,
 				BB38443A2371A02400243ED5 /* PickUpEvent.swift */,
 				BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */,
+				BB086374239DF59700C4886B /* ColoredToggleStyle.swift */,
 				BB8EE63C239D100E0098367A /* BlueToggle.swift */,
 				BB8EE63E239D10560098367A /* GreenToggle.swift */,
 				A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */,
@@ -157,6 +153,7 @@
 		BB384444237287D300243ED5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BB086376239DF62200C4886B /* Somatic-Rounded.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -221,9 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */,
+				BB086377239DF62200C4886B /* Somatic-Rounded.otf in Resources */,
 				A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */,
-				BB8EE646239DD89B0098367A /* Somatic-Rounded.otf in Resources */,
 				BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */,
 				A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */,
 				A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */,
@@ -285,7 +281,7 @@
 				BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */,
 				BB874330239BBF5600DFD2F9 /* AuthenticationHandlerView.swift in Sources */,
 				A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */,
-				BB8EE643239D115F0098367A /* ColoredToggleStyle.swift in Sources */,
+				BB086375239DF59700C4886B /* ColoredToggleStyle.swift in Sources */,
 				BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */,
 				A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */,
 				BB38443923719FA700243ED5 /* Event.swift in Sources */,

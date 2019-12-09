@@ -1,6 +1,6 @@
 //
 //  ColoredToggleStyle.swift
-//  
+//
 //
 //  Created by David Guido on 12/8/19.
 //
