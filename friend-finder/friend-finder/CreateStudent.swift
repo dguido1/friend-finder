@@ -86,17 +86,21 @@
             if !eventName.isEmpty {
                 
                 //Add PU Event to Firebase
-                // func uploadPickUpEvent(id: String, name: String, day: Int, month: Int, time: Int) {
-                // func uploadPickUpEvent(name: String, isStudyGroup: isEventStudyGroup,day: Int, month: Int, time: Int) {
+                let dateFormatter = DateFormatter()
+                dateFormatter.timeStyle = .none
+                dateFormatter.dateStyle = .medium
                 
-                //session.uploadPickUpEvent(id: cwid, name: eventName, day: eventDay, month: eventMonth, time: eventTime)
-                session.uploadPickUpEvent(eventName: eventName, isEventStudyGroup: isEventStudyGroup, eventSubject: eventSubject, eventCourse: eventCourse, eventLocation: eventLocation, eventDate: eventDate){
-                    (result, error) in
-                    if error != nil {
-                        print("Error")
-                    }
-           
-                }
+                let timeFormatter = DateFormatter()
+                timeFormatter.timeStyle = .medium
+                timeFormatter.dateStyle = .none
+
+                let eDate = dateFormatter.string(from: selectedDate)
+                let eTime = timeFormatter.string(from: selectedDate)
+                
+                let eLocation = String(selectedLocation)
+                
+                session.uploadPickUpEvent(eventName: self.eventName, isEventStudyGroup: !self.isEventStudyGroup, eventSubject: self.eventSubject, eventCourse: self.eventCourse, eventLocation: eLocation, eventTime: eTime, eventDate: eDate)
+                
             }
         }
         

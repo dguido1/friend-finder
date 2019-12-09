@@ -63,21 +63,28 @@
                 }
             }
         }
-        
-        func uploadPickUpEvent(eventName: String, isEventStudyGroup: Bool, eventSubject: String, eventCourse: String, eventLocation: String, eventDate: Date, handler: @escaping AuthDataResultCallback) {
+        func uploadPickUpEvent(eventName: String, isEventStudyGroup: Bool, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
             //Generates number going up as time goes on, sets order of TODO's by how old they are.
-            let number = Int(Date.timeIntervalSinceReferenceDate * 1000)
+            //let number = Int(Date.timeIntervalSinceReferenceDate * 1000)
             
-            let postRef = ref.child(String(number))
+            let postRef = ref.child("PickupEvents").childByAutoId()
             
-            // init(name: String, isStudyGroup: Bool, subject: String, course: String, location: String, date: Date, key: String = ""){..}
-            let post = PickUpEvent(name: eventName, isStudyGroup: isEventStudyGroup, subject: eventSubject, course: eventCourse, location: eventLocation, date: eventDate)
-            postRef.setValue(post.toAnyObject())
+            let post = PickUpEvent(name: eventName, isStudyGroup: isEventStudyGroup, subject: eventSubject, course: eventCourse, location: eventLocation, time: eventTime, date: eventDate)
+
+            let postObj = post.toAnyObject()
+
+            postRef.setValue(postObj, withCompletionBlock: { error, ref in
+                if error == nil {
+                    print("error")
+                }else{
+                    print("it worked")
+                }
+            })
         }
         
-        func updatePickUpEvent(key: String, eventName: String, isEventStudyGroup: Bool, eventSubject: String, eventCourse: String, eventLocation: String, eventDate: Date) {
+        func updatePickUpEvent(key: String, eventName: String, isEventStudyGroup: Bool, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
             
-            let update : [String:Any] = ["eventName": eventName, "isEventStudyGroup": isEventStudyGroup, "eventSubject": eventSubject, "eventCourse": eventCourse, "eventLocation": eventLocation, "eventDate": eventDate]
+            let update : [String:Any] = ["eventName": eventName, "isEventStudyGroup": isEventStudyGroup, "eventSubject": eventSubject, "eventCourse": eventCourse, "eventLocation": eventLocation, "eventTime": eventTime, "eventDate": eventDate]
             
             let childUpdate = ["\(key)": update]
             ref.updateChildValues(childUpdate)

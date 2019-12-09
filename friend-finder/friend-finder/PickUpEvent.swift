@@ -1,3 +1,4 @@
+
     //
     //  PickUpEvent.swift
     //  friend-finder
@@ -27,9 +28,11 @@
         // Event
         var name: String
         var location: String
-        var date: Date
         
-        init(name: String, isStudyGroup: Bool, subject: String, course: String, location: String, date: Date, key: String = "") {
+        var time: String   // Time conv
+        var date: String
+        
+        init(name: String, isStudyGroup: Bool, subject: String, course: String, location: String, time: String, date: String, key: String = "") {
 
             self.ref = nil
             self.key = key
@@ -40,6 +43,7 @@
             self.subject = subject
             self.course = course
             self.location = location
+            self.time = time
             self.date = date
         }
         
@@ -51,7 +55,8 @@
                 let subject = value["subject"] as? String,
                 let course = value["course"] as? String,
                 let location = value["location"] as? String,
-                let date = value["date"] as? Date
+                let time = value["time"] as? String,
+                let date = value["date"] as? String
                 else {
                     return nil
                 }
@@ -66,6 +71,7 @@
             self.subject = subject
             self.course = course
             self.location = location
+            self.time = time
             self.date = date
         }
         
@@ -76,7 +82,10 @@
                 "subject": subject,
                 "course": course,
                 "location": location,
+                "time": time,
                 "date": date
             ]
         }
     }
+
+    
