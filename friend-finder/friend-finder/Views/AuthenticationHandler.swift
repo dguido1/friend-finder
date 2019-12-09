@@ -8,7 +8,7 @@
     
     import SwiftUI
     
-    struct AuthenticationHandlerView: View {
+    struct AuthenticationHandler: View {
         @ObservedObject var session = FirebaseSession()
         
         @State var email: String = ""
@@ -19,9 +19,17 @@
         @State private var showSignUp = false
         @State var signInSuccess = false
         
+        @State private var isStudent = true
+        
         var body: AnyView {
             if (signInSuccess) {
-                return AnyView(NavBarStateView())
+                
+                if isStudent {
+                    return AnyView(NavBarStateViewStudent())
+                }
+                else {
+                    return AnyView(NavBarStateViewOrganization())
+                }
                 //AnyView(NavBarStateView())
             }
             else if (!showSignUp) {
@@ -74,10 +82,15 @@
                                     }.padding(.top, 10)
                                     
                                     Button (action: {
-                                        self.devSignIn()
+                                        self.devStudentSignIn()
                                     }){
-                                        Text("Development Sign-In")
+                                        Text("Student Sign-In (Development)")
                                     }.padding(.top, 10)
+                                    Button (action: {
+                                         self.devOrganizationSignIn()
+                                     }){
+                                         Text("Organization Sign-In (Development)")
+                                     }.padding(.top, 3)
                                     
                                 }.padding(.bottom, 150).foregroundColor(Color.white).opacity(0.8)
                                 
@@ -176,8 +189,14 @@
             }
         }
         
-        func devSignIn() {
+        func devStudentSignIn() {
             self.signInSuccess = true
+            self.isStudent = true
+        }
+        
+        func devOrganizationSignIn() {
+            self.signInSuccess = true
+            self.isStudent = false
         }
         
         func toSignUp() {
@@ -256,8 +275,8 @@
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight:.infinity).aspectRatio(contentMode: .fit)
     }
     
-    struct AuthenticationHandlerView_Previews: PreviewProvider {
+    struct AuthenticationHandler_Previews: PreviewProvider {
         static var previews: some View {
-            AuthenticationHandlerView()
+            AuthenticationHandler()
         }
     }

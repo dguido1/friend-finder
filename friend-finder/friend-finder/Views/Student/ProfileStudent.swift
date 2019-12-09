@@ -8,7 +8,7 @@
 
     import SwiftUI
 
-    struct ProfileView: View {
+    struct ProfileStudent: View {
         var body: some View {
             // Parent container (Full view)
             VStack {
@@ -122,9 +122,9 @@
         }
     }
 
-    struct ProfileView_Previews: PreviewProvider {
+    struct ProfileStudent_Previews: PreviewProvider {
         static var previews: some View {
-            ProfileView()
+            ProfileStudent()
         }
     }
 

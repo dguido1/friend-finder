@@ -14,7 +14,7 @@
         }
         
         var body: some View {
-            return AuthenticationHandlerView()
+            return AuthenticationHandler()
         }
     }
     

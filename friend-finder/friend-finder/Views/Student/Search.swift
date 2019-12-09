@@ -8,7 +8,7 @@
 
     import SwiftUI
 
-    struct SearchView: View {
+    struct Search: View {
             var body: some View {
                             
                 HStack() {
@@ -21,8 +21,8 @@
             }
     }
     
-    struct SearchView_Previews: PreviewProvider {
+    struct Search_Previews: PreviewProvider {
         static var previews: some View {
-            SearchView()
+            Search()
         }
     }

@@ -1,0 +1,373 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red31\green31\blue36;\red108\green121\blue134;
+\red252\green95\blue163;\red93\green216\blue255;\red208\green168\blue255;\red65\green161\blue192;\red158\green241\blue221;
+\red208\green168\blue255;\red161\green103\blue230;\red158\green241\blue221;\red103\green183\blue164;\red252\green106\blue93;
+\red161\green103\blue230;\red208\green191\blue105;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000\c85000;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c42394\c47462\c52518;
+\csgenericrgb\c98839\c37355\c63833;\csgenericrgb\c36295\c84643\c99897;\csgenericrgb\c81681\c65692\c99927;\csgenericrgb\c25490\c63137\c75294;\csgenericrgb\c61961\c94510\c86667;
+\csgenericrgb\c81569\c65882\c100000;\csgenericrgb\c63232\c40219\c90115;\csgenericrgb\c62145\c94386\c86819;\csgenericrgb\c40538\c71705\c64209;\csgenericrgb\c98912\c41558\c36568;
+\csgenericrgb\c63137\c40392\c90196;\csgenericrgb\c81498\c74939\c41233;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab494
+\pard\tx494\pardeftab494\pardirnatural\partightenfactor0
+
+\f0\fs20 \cf2 \cb3     \cf4 //\cf2 \
+    \cf4 //  DiscoverView.swift\cf2 \
+    \cf4 //\cf2 \
+    \cf4 //  Friend Finder, CPSC 362, M/W: 11:00am-12:50pm\cf2 \
+    \cf4 //  CSUF Fall 2019\cf2 \
+    \cf4 //\cf2 \
+    \cf4 //  Created by David Guido, Pierce Findlay & Kayla Nguyen on 11/01/2019.\cf2 \
+    \
+    
+\f1\b \cf5 import
+\f0\b0 \cf2  SwiftUI\
+    \
+    
+\f1\b \cf5 struct
+\f0\b0 \cf2  \cf6 DiscoverView\cf2 : \cf7 View\cf2  \{\
+        @\cf7 State\cf2  
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 animation\cf2  = 
+\f1\b \cf5 true
+\f0\b0 \cf2 \
+        @\cf7 ObservedObject\cf2  
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 session\cf2  = \cf9 FirebaseSession\cf2 ()\
+        \
+        \cf4 // Date function, returns current date\cf2 \
+        
+\f1\b \cf5 static
+\f0\b0 \cf2  
+\f1\b \cf5 let
+\f0\b0 \cf2  \cf8 dateFormatter\cf2 : \cf10 DateFormatter\cf2  = \{\
+            
+\f1\b \cf5 let
+\f0\b0 \cf2  formatter = \cf10 DateFormatter\cf2 ()\
+            formatter.\cf11 dateStyle\cf2  = .\cf11 long\cf2 \
+            
+\f1\b \cf5 return
+\f0\b0 \cf2  formatter\
+        \}()\
+        \
+        
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 now\cf2  = \cf7 Date\cf2 ()\
+        \
+        
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 body\cf2 : 
+\f1\b \cf5 some
+\f0\b0 \cf2  \cf7 View\cf2  \{\
+            \
+            \cf7 Spacer\cf2 ()\
+            \cf4 /*\cf2 \
+\cf4              \cf2 \
+\cf4              \cf2 \
+\cf4              // Parent container (Full view)\cf2 \
+\cf4              VStack \{\cf2 \
+\cf4              // Navbar container (Top title / settings)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              // Title container\cf2 \
+\cf4              VStack (alignment: .leading) \{\cf2 \
+\cf4              // Date text ('Sat' hard-coded + call to current date function)\cf2 \
+\cf4              Text ("Saturday, \\(now, formatter: Self.dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)\cf2 \
+\cf4              \cf2 \
+\cf4              Text ("Discover").font(.largeTitle).fontWeight(.bold).bold().foregroundColor(Color.black)\cf2 \
+\cf4              \cf2 \
+\cf4              // Line divider\cf2 \
+\cf4              Divider().padding(.vertical, -15)\cf2 \
+\cf4              \cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top).padding(.top, 25)\cf2 \
+\cf4              \cf2 \
+\cf4              // Settings button\cf2 \
+\cf4              Button(action:\cf2 \
+\cf4              \{\cf2 \
+\cf4              // Add an action here\cf2 \
+\cf4              \}, label:\cf2 \
+\cf4              \{\cf2 \
+\cf4              Image(systemName: "gear").font(.title).foregroundColor(.gray)\cf2 \
+\cf4              \})\cf2 \
+\cf4              \cf2 \
+\cf4              // Navbar container formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30)\cf2 \
+\cf4              \cf2 \
+\cf4              // Events ScrollView\cf2 \
+\cf4              ScrollView (.horizontal, showsIndicators: false) \{\cf2 \
+\cf4              // Secondary parent view (Makes left align & padding look correct)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              // EventCards horizontal stack\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              EventItemCard(cardImage: "shpacsuf", index: 0)\cf2 \
+\cf4              EventItemCard(cardImage: "heatcsuf", index: 1)\cf2 \
+\cf4              EventItemCard(cardImage: "aiccsuf", index: 2)\cf2 \
+\cf4              \cf2 \
+\cf4              // EventCards horizontal stack formatting\cf2 \
+\cf4              \}.padding(.leading, 40)\cf2 \
+\cf4              \}\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView formatting\cf2 \
+\cf4              \}.padding(.vertical, 25)\cf2 \
+\cf4              \cf2 \
+\cf4              // Notifications parent container\cf2 \
+\cf4              VStack \{\cf2 \
+\cf4              // Notifications title container\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              Text("Notifications").font(.title).bold().foregroundColor(Color.black).padding(.horizontal, 15)\cf2 \
+\cf4              \cf2 \
+\cf4              Button("Clear")\cf2 \
+\cf4              \{\cf2 \
+\cf4              // Button was tapped\cf2 \
+\cf4              \}.padding(.horizontal, 10)\cf2 \
+\cf4              \cf2 \
+\cf4              Button("See All")\cf2 \
+\cf4              \{\cf2 \
+\cf4              // Button was tapped\cf2 \
+\cf4              \}.padding(.horizontal, 10)\cf2 \
+\cf4              \cf2 \
+\cf4              // Notifications title container formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading).padding(.horizontal, 10)\cf2 \
+\cf4              \cf2 \
+\cf4              // Notifications vertical stack\cf2 \
+\cf4              VStack \{\cf2 \
+\cf4              // Four hard-coded 'Notification Items'\cf2 \
+\cf4              NotificationItem(icon: "envelope", message: "New message from Anthony Rodriguez")\cf2 \
+\cf4              NotificationItem(icon: "gear", message: "New theme available: Dark Theme")\cf2 \
+\cf4              NotificationItem(icon: "person.crop.circle.badge.plus", message: "3 New subscribers")\cf2 \
+\cf4              NotificationItem(icon: "person.3", message: "New club activity: SHPA Blood Drive")\cf2 \
+\cf4              \cf2 \
+\cf4              // Notifications vertical stack formatting\cf2 \
+\cf4              \}.padding(.horizontal, 25)\cf2 \
+\cf4              \cf2 \
+\cf4              // Notifications parent container formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: Alignment.center).aspectRatio(contentMode: .fit).padding(.vertical, 20)\cf2 \
+\cf4              \cf2 \
+\cf4              // Parent container formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)\cf2 \
+\cf4              \cf2 \
+\cf4              */\cf2 \
+        \}\
+    \
+        \
+        \cf4 /*\cf2 \
+\cf4          Custom Event Card View\cf2 \
+\cf4          */\cf2 \
+        
+\f1\b \cf5 func
+\f0\b0 \cf2  \cf8 EventItemCard\cf2 () -> 
+\f1\b \cf5 some
+\f0\b0 \cf2  \cf7 View\cf2  \{\
+            \cf4 /*\cf2 \
+\cf4              \cf2 \
+\cf4             var cardImage : String\cf2 \
+\cf4             var index: Int = 0\cf2 \
+\cf4             let pickUpEvent : PickUpEvent\cf2 \
+\cf4             \cf2 \
+\cf4             session.getPickUpEvents()\cf2 \
+\cf4              \cf2 \
+\
+\cf4              \cf2 \
+\cf4              \cf2 \
+\cf4              switch (index)\cf2 \
+\cf4              \{\cf2 \
+\cf4              case 0:\cf2 \
+\cf4              return  VStack \{\cf2 \
+\cf4              // ScrollView element texts\cf2 \
+\cf4              VStack(alignment: .leading) \{\cf2 \
+\cf4              Text(pickUpEvent.date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)\cf2 \
+\cf4              GetEventTypeLabel(pickUpEvent)\cf2 \
+\cf4              Text(pickUpEvent.name).font(.title).foregroundColor(Color.black)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView element texts formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView button (image, mask, shadow)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              Button (action:\{\cf2 \
+\cf4              \})\{\cf2 \
+\cf4              Image(cardImage)\cf2 \
+\cf4              .resizable()\cf2 \
+\cf4              .aspectRatio(contentMode: .fit)\cf2 \
+\cf4              .frame(minWidth: 0, maxWidth: .infinity)\cf2 \
+\cf4              .cornerRadius(10)\cf2 \
+\cf4              .shadow(radius: 10)\cf2 \
+\cf4              \}.buttonStyle(PlainButtonStyle())\cf2 \
+\cf4              \cf2 \
+\cf4              // Right arrow image\cf2 \
+\cf4              Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)\cf2 \
+\cf4              \}\cf2 \
+\cf4              \cf2 \
+\cf4              // EventItemCard parent container formatting\cf2 \
+\cf4              \}.frame(minHeight: 0, maxHeight: 276)\cf2 \
+\cf4              case 1:\cf2 \
+\cf4              return  VStack \{\cf2 \
+\cf4              // ScrollView element texts\cf2 \
+\cf4              VStack(alignment: .leading) \{\cf2 \
+\cf4              Text(pickUpEvent.date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)\cf2 \
+\cf4              GetEventTypeLabel(pickUpEvent)\cf2 \
+\cf4              Text(pickUpEvent.name).font(.title).foregroundColor(Color.black)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView element texts formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView button (image, mask, shadow)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              Button (action:\{\cf2 \
+\cf4              \})\{\cf2 \
+\cf4              Image(cardImage)\cf2 \
+\cf4              .resizable()\cf2 \
+\cf4              .aspectRatio(contentMode: .fit)\cf2 \
+\cf4              .frame(minWidth: 0, maxWidth: .infinity)\cf2 \
+\cf4              .cornerRadius(10)\cf2 \
+\cf4              .shadow(radius: 10)\cf2 \
+\cf4              \}.buttonStyle(PlainButtonStyle())\cf2 \
+\cf4              \cf2 \
+\cf4              // Right arrow image\cf2 \
+\cf4              Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)\cf2 \
+\cf4              \}\cf2 \
+\cf4              \cf2 \
+\cf4              // EventItemCard parent container formatting\cf2 \
+\cf4              \}.frame(minHeight: 0, maxHeight: 276)\cf2 \
+\cf4              case 2:\cf2 \
+\cf4              return  VStack \{\cf2 \
+\cf4              // ScrollView element texts\cf2 \
+\cf4              VStack(alignment: .leading) \{\cf2 \
+\cf4              Text(pickUpEvent.date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)\cf2 \
+\cf4              GetEventTypeLabel(pickUpEvent)\cf2 \
+\cf4              Text(pickUpEvent.name).font(.title).foregroundColor(Color.black)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView element texts formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView button (image, mask, shadow)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              Button (action:\{\cf2 \
+\cf4              \})\{\cf2 \
+\cf4              Image(cardImage)\cf2 \
+\cf4              .resizable()\cf2 \
+\cf4              .aspectRatio(contentMode: .fit)\cf2 \
+\cf4              .frame(minWidth: 0, maxWidth: .infinity)\cf2 \
+\cf4              .cornerRadius(10)\cf2 \
+\cf4              .shadow(radius: 10)\cf2 \
+\cf4              \}.buttonStyle(PlainButtonStyle())\cf2 \
+\cf4              \cf2 \
+\cf4              // Right arrow image\cf2 \
+\cf4              Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)\cf2 \
+\cf4              \}\cf2 \
+\cf4              \cf2 \
+\cf4              // EventItemCard parent container formatting\cf2 \
+\cf4              \}.frame(minHeight: 0, maxHeight: 276)\cf2 \
+\cf4              default:\cf2 \
+\cf4              return  VStack \{\cf2 \
+\cf4              // ScrollView element texts\cf2 \
+\cf4              VStack(alignment: .leading) \{\cf2 \
+\cf4              Text(pickUpEvent.date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)\cf2 \
+\cf4              GetEventTypeLabel(pickUpEvent)\cf2 \
+\cf4              Text(pickUpEvent.name).font(.title).foregroundColor(Color.black)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView element texts formatting\cf2 \
+\cf4              \}.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)\cf2 \
+\cf4              \cf2 \
+\cf4              // ScrollView button (image, mask, shadow)\cf2 \
+\cf4              HStack \{\cf2 \
+\cf4              Button (action:\{\cf2 \
+\cf4              \})\{\cf2 \
+\cf4              Image(cardImage)\cf2 \
+\cf4              .resizable()\cf2 \
+\cf4              .aspectRatio(contentMode: .fit)\cf2 \
+\cf4              .frame(minWidth: 0, maxWidth: .infinity)\cf2 \
+\cf4              .cornerRadius(10)\cf2 \
+\cf4              .shadow(radius: 10)\cf2 \
+\cf4              \}.buttonStyle(PlainButtonStyle())\cf2 \
+\cf4              \cf2 \
+\cf4              // Right arrow image\cf2 \
+\cf4              Image(systemName: "arrow.right").font(.headline).foregroundColor(.gray).frame(minHeight: 0, maxHeight: .infinity)\cf2 \
+\cf4              \}\cf2 \
+\cf4              \cf2 \
+\cf4              */\cf2 \
+            
+\f1\b \cf5 return
+\f0\b0 \cf2  \cf7 AnyView\cf2 (\cf7 Spacer\cf2 ())\
+            \
+            \cf4 // EventItemCard parent container formatting\cf2 \
+        \}\
+        \
+        \
+        \cf4 // EventItemCard parent container\cf2 \
+        \
+        \
+        \
+        
+\f1\b \cf5 func
+\f0\b0 \cf2  \cf8 GetEventTypeLabel\cf2 () -> 
+\f1\b \cf5 some
+\f0\b0 \cf2  \cf7 View\cf2  \{\
+            
+\f1\b \cf5 let
+\f0\b0 \cf2  pickUpEvent: \cf12 PickUpEvent\cf2 \
+            \
+            
+\f1\b \cf5 if
+\f0\b0 \cf2  pickUpEvent.\cf13 isStudyGroup\cf2 \
+            \{\
+                
+\f1\b \cf5 return
+\f0\b0 \cf2  \cf7 AnyView\cf2 (\cf7 Text\cf2 (\cf14 "Study Group"\cf2 ))\
+            \}\
+            
+\f1\b \cf5 else
+\f0\b0 \cf2 \
+            \{\
+                
+\f1\b \cf5 return
+\f0\b0 \cf2  \cf7 AnyView\cf2 (\cf7 Text\cf2 (\cf14 "Meeting Location"\cf2 ))\
+            \}\
+        \}\
+    \}\
+    \
+    \cf4 /*\cf2 \
+\cf4      Custom Notification View\cf2 \
+\cf4      */\cf2 \
+    
+\f1\b \cf5 struct
+\f0\b0 \cf2  \cf6 NotificationItem\cf2  : \cf7 View\cf2  \{\
+        
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 icon\cf2  : \cf7 String\cf2 \
+        
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 message\cf2  : \cf7 String\cf2 \
+        \
+        
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 body\cf2  : 
+\f1\b \cf5 some
+\f0\b0 \cf2  \cf7 View\cf2  \{\
+            \cf4 // Notification parent container\cf2 \
+            
+\f1\b \cf5 return
+\f0\b0 \cf2   \cf7 HStack\cf2  \{\
+                \cf7 Image\cf2 (systemName: \cf13 icon\cf2 ).\cf15 font\cf2 (.\cf11 subheadline\cf2 ).\cf15 frame\cf2 (minWidth: \cf16 30\cf2 , maxWidth: \cf16 30\cf2 , minHeight: \cf16 30\cf2 , maxHeight: \cf16 30\cf2 )\
+                \
+                \cf7 Text\cf2 (\cf13 message\cf2 ).\cf15 font\cf2 (.\cf11 subheadline\cf2 )\
+                \
+                \cf4 // Notification parent container formatting\cf2 \
+            \}.\cf15 frame\cf2 (minWidth: \cf16 0\cf2 , maxWidth: .\cf11 infinity\cf2 , minHeight: \cf16 0\cf2 , maxHeight: \cf16 20\cf2 , alignment: \cf7 Alignment\cf2 .\cf11 leading\cf2 )\
+        \}\
+    \}\
+    \
+    
+\f1\b \cf5 struct
+\f0\b0 \cf2  \cf6 DiscoverView_Previews\cf2 : \cf7 PreviewProvider\cf2  \{\
+        
+\f1\b \cf5 static
+\f0\b0 \cf2  
+\f1\b \cf5 var
+\f0\b0 \cf2  \cf8 previews\cf2 : 
+\f1\b \cf5 some
+\f0\b0 \cf2  \cf7 View\cf2  \{\
+            \cf12 DiscoverView\cf2 ()\
+        \}\
+    \}\
+}
