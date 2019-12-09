@@ -8,7 +8,7 @@
     
     import SwiftUI
     
-    struct NewPickupEventView: View {
+    struct CreateStudent: View {
         
         enum PickupCategory {
             case studyGroup, meetLocation
@@ -304,6 +304,6 @@
     
     struct NewPickupEventView_Previews: PreviewProvider {
         static var previews: some View {
-            AnyView(NewPickupEventView())
+            AnyView(CreateStudent())
         }
     }
