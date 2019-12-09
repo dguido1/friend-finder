@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */; };
+		A1F7A6E123322CFF00BC7537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */; };
+		A1F7A6E323322CFF00BC7537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6E223322CFF00BC7537 /* ContentView.swift */; };
+		A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E423322D0200BC7537 /* Assets.xcassets */; };
+		A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */; };
+		A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */; };
+		A1F7A6F723322DC500BC7537 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F223322DC500BC7537 /* SearchView.swift */; };
+		A1F7A6F823322DC600BC7537 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F323322DC500BC7537 /* DiscoverView.swift */; };
+		A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F423322DC500BC7537 /* Constants.swift */; };
+		A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F523322DC500BC7537 /* ProfileView.swift */; };
+		A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7A6F623322DC500BC7537 /* CreateView.swift */; };
+		BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB38442B237168B300243ED5 /* GoogleService-Info.plist */; };
+		BB38443523719EA400243ED5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443423719EA400243ED5 /* User.swift */; };
+		BB38443923719FA700243ED5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443823719FA700243ED5 /* Event.swift */; };
+		BB38443B2371A02400243ED5 /* PickUpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38443A2371A02400243ED5 /* PickUpEvent.swift */; };
+		BB3844432372480D00243ED5 /* FirebaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3844422372480D00243ED5 /* FirebaseSession.swift */; };
+		BB38444923728A4600243ED5 /* Somatic-Rounded.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB38444823728A4600243ED5 /* Somatic-Rounded.otf */; };
+		BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BB704BE72397D27200858B44 /* ContentBackup.rtf */; };
+		BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */; };
+		BB874330239BBF5600DFD2F9 /* AuthenticationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */; };
+		BB874332239BBFDE00DFD2F9 /* NavBarStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */; };
+		BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63C239D100E0098367A /* BlueToggle.swift */; };
+		BB8EE63F239D10560098367A /* GreenToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63E239D10560098367A /* GreenToggle.swift */; };
+		BB8EE643239D115F0098367A /* ColoredToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */; };
+		FC81FE494203023D4D36696B /* Pods_friend_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		56F53B249E75A65EE3687362 /* Pods-friend-finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friend-finder.release.xcconfig"; path = "Target Support Files/Pods-friend-finder/Pods-friend-finder.release.xcconfig"; sourceTree = "<group>"; };
+		8D2E7B0A195D7ADD0D58C738 /* Pods-friend-finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friend-finder.debug.xcconfig"; path = "Target Support Files/Pods-friend-finder/Pods-friend-finder.debug.xcconfig"; sourceTree = "<group>"; };
+		A1F7A6DB23322CFF00BC7537 /* friend-finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friend-finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1F7A6E223322CFF00BC7537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1F7A6E423322D0200BC7537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1F7A6EA23322D0300BC7537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1F7A6EC23322D0300BC7537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1F7A6F223322DC500BC7537 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A1F7A6F323322DC500BC7537 /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		A1F7A6F423322DC500BC7537 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1F7A6F523322DC500BC7537 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A1F7A6F623322DC500BC7537 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		BB38442B237168B300243ED5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB38443423719EA400243ED5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BB38443823719FA700243ED5 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BB38443A2371A02400243ED5 /* PickUpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpEvent.swift; sourceTree = "<group>"; };
+		BB3844422372480D00243ED5 /* FirebaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSession.swift; sourceTree = "<group>"; };
+		BB38444823728A4600243ED5 /* Somatic-Rounded.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Somatic-Rounded.otf"; path = "../../../../CSUF/CPSC/CPSC362/FriendFinder/Database/plist/Somatic-Rounded.otf"; sourceTree = "<group>"; };
+		BB704BE72397D27200858B44 /* ContentBackup.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ContentBackup.rtf; sourceTree = "<group>"; };
+		BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPickupEventView.swift; sourceTree = "<group>"; };
+		BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHandlerView.swift; sourceTree = "<group>"; };
+		BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarStateView.swift; sourceTree = "<group>"; };
+		BB8EE63C239D100E0098367A /* BlueToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToggle.swift; sourceTree = "<group>"; };
+		BB8EE63E239D10560098367A /* GreenToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenToggle.swift; sourceTree = "<group>"; };
+		BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColoredToggleStyle.swift; path = "/Users/dguido/Documents/GitHub/friend-finder/friend-finder/friend-finder/ColoredToggleStyle.swift"; sourceTree = "<absolute>"; };
+		D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friend_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1F7A6D823322CFF00BC7537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC81FE494203023D4D36696B /* Pods_friend_finder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EB6844EF3D11E5994466DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D2E7B0A195D7ADD0D58C738 /* Pods-friend-finder.debug.xcconfig */,
+				56F53B249E75A65EE3687362 /* Pods-friend-finder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9DF8FAEFA0D86AC90A3ADE15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1F7A6D223322CFF00BC7537 = {
+			isa = PBXGroup;
+			children = (
+				BB704BE72397D27200858B44 /* ContentBackup.rtf */,
+				A1F7A6DD23322CFF00BC7537 /* friend-finder */,
+				A1F7A6DC23322CFF00BC7537 /* Products */,
+				2EB6844EF3D11E5994466DF2 /* Pods */,
+				9DF8FAEFA0D86AC90A3ADE15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A1F7A6DC23322CFF00BC7537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1F7A6DB23322CFF00BC7537 /* friend-finder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1F7A6DD23322CFF00BC7537 /* friend-finder */ = {
+			isa = PBXGroup;
+			children = (
+				BB38444823728A4600243ED5 /* Somatic-Rounded.otf */,
+				BB384444237287D300243ED5 /* Fonts */,
+				A1F7A6DE23322CFF00BC7537 /* AppDelegate.swift */,
+				BB38443423719EA400243ED5 /* User.swift */,
+				BB38443823719FA700243ED5 /* Event.swift */,
+				A1F7A6E223322CFF00BC7537 /* ContentView.swift */,
+				BB87432F239BBF5600DFD2F9 /* AuthenticationHandlerView.swift */,
+				BB874331239BBFDE00DFD2F9 /* NavBarStateView.swift */,
+				A1F7A6F223322DC500BC7537 /* SearchView.swift */,
+				BB8EE642239D115F0098367A /* ColoredToggleStyle.swift */,
+				BB3844422372480D00243ED5 /* FirebaseSession.swift */,
+				BB38443A2371A02400243ED5 /* PickUpEvent.swift */,
+				BB704BE92397DFBD00858B44 /* NewPickupEventView.swift */,
+				BB8EE63C239D100E0098367A /* BlueToggle.swift */,
+				BB8EE63E239D10560098367A /* GreenToggle.swift */,
+				A1F7A6E023322CFF00BC7537 /* SceneDelegate.swift */,
+				A1F7A6F323322DC500BC7537 /* DiscoverView.swift */,
+				A1F7A6F623322DC500BC7537 /* CreateView.swift */,
+				A1F7A6F523322DC500BC7537 /* ProfileView.swift */,
+				A1F7A6F423322DC500BC7537 /* Constants.swift */,
+				A1F7A6E423322D0200BC7537 /* Assets.xcassets */,
+				A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */,
+				BB38442B237168B300243ED5 /* GoogleService-Info.plist */,
+				A1F7A6EC23322D0300BC7537 /* Info.plist */,
+				A1F7A6E623322D0200BC7537 /* Preview Content */,
+			);
+			path = "friend-finder";
+			sourceTree = "<group>";
+		};
+		A1F7A6E623322D0200BC7537 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A1F7A6E723322D0200BC7537 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB384444237287D300243ED5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1F7A6DA23322CFF00BC7537 /* friend-finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F7A6EF23322D0300BC7537 /* Build configuration list for PBXNativeTarget "friend-finder" */;
+			buildPhases = (
+				1AEA49CEED3757808AFE669E /* [CP] Check Pods Manifest.lock */,
+				A1F7A6D723322CFF00BC7537 /* Sources */,
+				A1F7A6D823322CFF00BC7537 /* Frameworks */,
+				A1F7A6D923322CFF00BC7537 /* Resources */,
+				C3E0BBE3DC73341487AF8D50 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "friend-finder";
+			productName = "friend-finder";
+			productReference = A1F7A6DB23322CFF00BC7537 /* friend-finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1F7A6D323322CFF00BC7537 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = CSUF;
+				TargetAttributes = {
+					A1F7A6DA23322CFF00BC7537 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = A1F7A6D623322CFF00BC7537 /* Build configuration list for PBXProject "friend-finder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1F7A6D223322CFF00BC7537;
+			productRefGroup = A1F7A6DC23322CFF00BC7537 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1F7A6DA23322CFF00BC7537 /* friend-finder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1F7A6D923322CFF00BC7537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB704BE82397D27200858B44 /* ContentBackup.rtf in Resources */,
+				A1F7A6EB23322D0300BC7537 /* LaunchScreen.storyboard in Resources */,
+				BB38444923728A4600243ED5 /* Somatic-Rounded.otf in Resources */,
+				BB38442C237168B300243ED5 /* GoogleService-Info.plist in Resources */,
+				A1F7A6E823322D0200BC7537 /* Preview Assets.xcassets in Resources */,
+				A1F7A6E523322D0200BC7537 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AEA49CEED3757808AFE669E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-friend-finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3E0BBE3DC73341487AF8D50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friend-finder/Pods-friend-finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-friend-finder/Pods-friend-finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-friend-finder/Pods-friend-finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1F7A6D723322CFF00BC7537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB38443B2371A02400243ED5 /* PickUpEvent.swift in Sources */,
+				A1F7A6F723322DC500BC7537 /* SearchView.swift in Sources */,
+				BB8EE63F239D10560098367A /* GreenToggle.swift in Sources */,
+				BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */,
+				BB874330239BBF5600DFD2F9 /* AuthenticationHandlerView.swift in Sources */,
+				A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */,
+				BB8EE643239D115F0098367A /* ColoredToggleStyle.swift in Sources */,
+				BB704BEA2397DFBD00858B44 /* NewPickupEventView.swift in Sources */,
+				A1F7A6FB23322DC600BC7537 /* CreateView.swift in Sources */,
+				BB38443923719FA700243ED5 /* Event.swift in Sources */,
+				A1F7A6E123322CFF00BC7537 /* SceneDelegate.swift in Sources */,
+				BB874332239BBFDE00DFD2F9 /* NavBarStateView.swift in Sources */,
+				A1F7A6F823322DC600BC7537 /* DiscoverView.swift in Sources */,
+				A1F7A6E323322CFF00BC7537 /* ContentView.swift in Sources */,
+				A1F7A6FA23322DC600BC7537 /* ProfileView.swift in Sources */,
+				BB38443523719EA400243ED5 /* User.swift in Sources */,
+				BB3844432372480D00243ED5 /* FirebaseSession.swift in Sources */,
+				A1F7A6F923322DC600BC7537 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1F7A6E923322D0300BC7537 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F7A6EA23322D0300BC7537 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1F7A6ED23322D0300BC7537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1F7A6EE23322D0300BC7537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1F7A6F023322D0300BC7537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D2E7B0A195D7ADD0D58C738 /* Pods-friend-finder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"friend-finder/Preview Content\"";
+				DEVELOPMENT_TEAM = R252PR8AVU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "friend-finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csuf.friend-finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1F7A6F123322D0300BC7537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F53B249E75A65EE3687362 /* Pods-friend-finder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"friend-finder/Preview Content\"";
+				DEVELOPMENT_TEAM = R252PR8AVU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "friend-finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csuf.friend-finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1F7A6D623322CFF00BC7537 /* Build configuration list for PBXProject "friend-finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F7A6ED23322D0300BC7537 /* Debug */,
+				A1F7A6EE23322D0300BC7537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1F7A6EF23322D0300BC7537 /* Build configuration list for PBXNativeTarget "friend-finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F7A6F023322D0300BC7537 /* Debug */,
+				A1F7A6F123322D0300BC7537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1F7A6D323322CFF00BC7537 /* Project object */;
+}
