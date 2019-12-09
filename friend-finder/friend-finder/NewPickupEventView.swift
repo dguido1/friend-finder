@@ -45,21 +45,21 @@
             Group {
                 VStack {
                     
-                    VStack (alignment: .leading) {
+                 //   VStack (alignment: .leading) {
                         // Date text ('Sat' hard-coded + call to current date function)
-                        Text ("Saturday, \(currentDate, formatter: dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)
+                       // Text ("Saturday, \(currentDate, formatter: dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)
                         
-                        HStack{
-                            Text ("Create").font(.title).fontWeight(.bold).bold().foregroundColor(Color.black)
-                            Text ("Student | Pick Up Group").font(.headline).fontWeight(.bold).bold().foregroundColor(Color.black).padding(.top, 7).padding(.leading, 10)
+                    //    HStack{
+                        //    Text ("Create").font(.title).fontWeight(.bold).bold().foregroundColor(Color.black)
+                        //    Text ("Student | Pick Up Group").font(.headline).fontWeight(.bold).bold().foregroundColor(Color.black).padding(.top, 7).padding(.leading, 10)
                             
-                        }.frame(alignment: .bottom)
+                     //   }.frame(alignment: .bottom)
                         
                         // Line divider
-                        Divider().padding(.top, -15)
+                   //     Divider().padding(.top, -15)
                         
-                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 75, maxHeight: 75, alignment: Alignment.topLeading).padding(.top, 30)
-                    
+                 //   }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 75, maxHeight: 75, alignment: Alignment.topLeading).padding(.top, 30)
+                
                     VStack {
                         CustomNameInputView()
                         Divider().padding(.bottom, 5).padding(.top, -5)
@@ -299,5 +299,11 @@
             }) {
                 Text("Create Event")
             }.padding(.bottom, 0)
+        }
+    }
+    
+    struct NewPickupEventView_Previews: PreviewProvider {
+        static var previews: some View {
+            AnyView(NewPickupEventView())
         }
     }

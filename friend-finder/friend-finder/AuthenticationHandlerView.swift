@@ -21,7 +21,7 @@
         
         var body: AnyView {
             if (signInSuccess) {
-                return AnyView(NewPickupEventView())
+                return AnyView(NavBarStateView())
                 //AnyView(NavBarStateView())
             }
             else if (!showSignUp) {
