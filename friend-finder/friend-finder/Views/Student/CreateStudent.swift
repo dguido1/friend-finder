@@ -22,9 +22,7 @@
         // Event vars
         @State var eventName: String = ""
         @State var eventLocation: String = "Location00"
-        @State var eventLocationPool = ["Location00", "Location01", "Location02", "Location03",
-                                        "Location04", "Location05", "Location06", "Location07",
-                                        "Location08", "Location09"]
+        @State var eventLocationPool = ["Library", "TitanStudentUnion", "CS Building", "Engineering Building","EC Building", "McCarthy Hall", "Student Housing", "Humanities Building","University Hall", "Langsdorf Hall"]
         @State var selectedLocation = 4
         @State var eventDate: Date = Date()
         
@@ -37,45 +35,108 @@
         @State private var selectedDate = Date()   // Date picker selection
         @State var currentDate = Date()   // Current date/time
         
+        // Create student handler vars
+        @State var showLocationPicker: Bool = false
+        @State var showDatePicker: Bool = false
+        
         // Firebase database
         @ObservedObject var session = FirebaseSession()
         @Environment(\.presentationMode) var presentationMode
         
         var body: some View {
-            Group {
-                VStack {
-                    
-                 //   VStack (alignment: .leading) {
-                        // Date text ('Sat' hard-coded + call to current date function)
-                       // Text ("Saturday, \(currentDate, formatter: dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)
-                        
-                    //    HStack{
-                        //    Text ("Create").font(.title).fontWeight(.bold).bold().foregroundColor(Color.black)
-                        //    Text ("Student | Pick Up Group").font(.headline).fontWeight(.bold).bold().foregroundColor(Color.black).padding(.top, 7).padding(.leading, 10)
-                            
-                     //   }.frame(alignment: .bottom)
-                        
-                        // Line divider
-                   //     Divider().padding(.top, -15)
-                        
-                 //   }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 75, maxHeight: 75, alignment: Alignment.topLeading).padding(.top, 30)
-                
-                    VStack {
-                        CustomNameInputView()
-                        Divider().padding(.bottom, 5).padding(.top, -5)
-                        CustomCategoryInputView()
-                        Divider().padding(.bottom, 3)
-                        CustomCategoryView()
-                        CustomLocationInputView().padding(.trailing, 35).padding(.bottom, -20).frame(minWidth: 200, maxWidth: 200).padding(.bottom, 3)
-                        CustomDateInputView().padding(.trailing, 35)
-                    }.frame(alignment: .topLeading)
-                    
-                    CustomCreateEventButton()
-                    
-                }.frame(alignment: .topLeading)
-            }
-            .padding()
+            
+            CreateStudentHandler()
         }
+        
+        // Function that returns correct view based on current state
+        func CreateStudentHandler() -> some View {
+            
+            // Neither picker has been selected
+            if (!showLocationPicker && !showDatePicker) {   // Show default view
+                
+                return AnyView(DefaultView())
+            }
+            else if (showLocationPicker) {   // Show location picker
+                
+                return AnyView(CustomFSLocationInputView().frame(alignment: .topLeading))
+            }
+            else {   // Show date picker
+                
+                return AnyView(CustomFSDateInputView().frame(alignment: .topLeading))
+            }
+        }
+        
+        func DefaultView() -> some View {
+            
+            return VStack {
+                CustomNameInputView()
+                Divider().padding(.bottom, 5).padding(.top, -5)
+                CustomCategoryInputView()
+                Divider().padding(.bottom, 3)
+                CustomCategoryView()
+                
+                Button(action: {
+                    self.showLocationPicker = true
+                }) {
+                    Text("Choose a Location")
+                }.padding(.bottom, 19)
+                
+                Button(action: {
+                    self.showDatePicker = true
+                }) {
+                    Text("Choose a Date & Time")
+                }.padding(.bottom, 19)            }
+        }
+        
+        // Location Picker input view (Fullscreen)
+        func CustomFSLocationInputView() -> some View {
+            
+            return VStack{
+                // Back button
+                Button(action:
+                {
+                    self.showLocationPicker = false
+                }) {
+                    Text("Back to Create").font(.subheadline).fontWeight(.medium).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                }
+                
+                Picker(selection: $selectedLocation, label: Text("Please choose a location")) {
+                    ForEach(0 ..< eventLocationPool.count) {
+                        Text(self.eventLocationPool[$0])
+                    }
+                }.labelsHidden().frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            }
+        }
+        
+        func CustomFSDateInputView() -> some View {
+            
+            var endComponents = DateComponents()
+            endComponents.month = 12
+            endComponents.year = 2019
+            endComponents.day = 31
+            endComponents.minute = 59
+            endComponents.hour = 23
+            
+            let endDate = Calendar.current.date(from: endComponents) ?? Date()
+            let range = Date() ... endDate
+            
+            return VStack {
+                    // Back button
+                    Button(action:
+                    {
+                        self.showDatePicker = false
+                    }) {
+                        Text("Back to Create").font(.subheadline).fontWeight(.medium).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).padding(.top, 3)
+                    }.padding(.bottom, 250)
+                
+                
+                Text("Pick a Date & Time:").frame(minWidth: 250, maxWidth: 250, alignment: .leading).font(.headline)
+                Text("(Restrictions: December, 6am-12am)").opacity(0.75).frame(minWidth: 250, maxWidth: 250).font(.caption)
+                
+                DatePicker("Event Date", selection: $selectedDate, in: range).labelsHidden()
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        }
+        
         
         func dismiss() {
             presentationMode.wrappedValue.dismiss()
@@ -93,7 +154,7 @@
                 let timeFormatter = DateFormatter()
                 timeFormatter.timeStyle = .medium
                 timeFormatter.dateStyle = .none
-
+                
                 let eDate = dateFormatter.string(from: selectedDate)
                 let eTime = timeFormatter.string(from: selectedDate)
                 
@@ -234,56 +295,6 @@
                     TextField(eventCourse, text:$eventCourse).padding(.bottom, -5).padding(.leading, 10).foregroundColor(Color.black).frame(alignment: .leading).multilineTextAlignment(.leading).frame(minWidth: 100, maxWidth: 100, alignment: .bottomLeading).foregroundColor(Color.black)
                 }
             }.frame(alignment: .leading)
-        }
-        
-        // Location Picker input view
-        func CustomLocationInputView() -> some View {
-            
-            if (!isEventStudyGroup)
-            {
-                return VStack{
-                    Text("Pick a Location:").frame(minWidth: 250, maxWidth: 250, alignment: .leading).font(.headline)
-                    
-                    Picker(selection: $selectedLocation, label: Text("Please choose a location")) {
-                        ForEach(0 ..< eventLocationPool.count) {
-                            Text(self.eventLocationPool[$0])
-                        }
-                    }.labelsHidden().padding(.top, -20)
-                }.padding(.top, 5)
-            }
-            else
-            {
-                return VStack{
-                    Text("Pick a Location:").frame(minWidth: 250, maxWidth: 250, alignment: .leading).font(.headline)
-                    
-                    Picker(selection: $selectedLocation, label: Text("Please choose a location")) {
-                        ForEach(0 ..< eventLocationPool.count) {
-                            Text(self.eventLocationPool[$0])
-                        }
-                    }.labelsHidden().padding(.top, -20)
-                }.padding(.top, 5)
-            }
-        }
-        
-        // Location DatePicker input view
-        func CustomDateInputView() -> some View {
-            var endComponents = DateComponents()
-            endComponents.month = 12
-            endComponents.year = 2019
-            endComponents.day = 31
-            endComponents.minute = 59
-            endComponents.hour = 23
-            
-            let endDate = Calendar.current.date(from: endComponents) ?? Date()
-            let range = Date() ... endDate
-            
-            return VStack {
-                
-                Text("Pick a Date & Time:").frame(minWidth: 250, maxWidth: 250, alignment: .leading).font(.headline)
-                Text("(Restrictions: December, 6am-12am)").opacity(0.75).frame(minWidth: 250, maxWidth: 250).font(.caption)
-                
-                DatePicker("Event Date", selection: $selectedDate, in: range).labelsHidden().padding(.top, -30).frame(minWidth: 125, maxWidth: 125)
-            }
         }
         
         // Create event button view

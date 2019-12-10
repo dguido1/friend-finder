@@ -25,8 +25,8 @@
                 CreateStudent().tabItem({
                     Image(systemName: Constants.TabBarImageNameStudent.tabBar1)
                         .font(.title)
-                    Text("\(Constants.TabBarTextStudent.tabBar0)")
-                    }).tag(0)
+                    Text("\(Constants.TabBarTextStudent.tabBar1)")
+                    }).tag(1)
                     
                 // Tab 02
                 Search().tabItem({
