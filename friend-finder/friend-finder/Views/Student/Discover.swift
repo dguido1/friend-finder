@@ -131,11 +131,11 @@
             return  VStack {
                 // ScrollView element texts
                 VStack(alignment: .leading) {
-                    if (session.items.count > 0)
+                    if (session.pickUpItems.count > 0)
                     {
-                        Text(session.items[index].date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
-                        GetEventTypeLabel(pickUpEvent: session.items[index])
-                        Text(session.items[index].name).font(.title).foregroundColor(Color.black)
+                        Text(session.pickUpItems[index].date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
+                        GetEventTypeLabel(pickUpEvent: session.pickUpItems[index])
+                        Text(session.pickUpItems[index].name).font(.title).foregroundColor(Color.black)
                     }
                     else
                     {

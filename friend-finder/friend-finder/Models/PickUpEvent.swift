@@ -27,18 +27,20 @@
         
         // Event
         var name: String
+        var description: String
         var location: String
         
         var time: String   // Time conv
         var date: String
         
-        init(name: String, isStudyGroup: String, subject: String, course: String, location: String, time: String, date: String, key: String = "") {
+        init(name: String, description: String, isStudyGroup: String, subject: String, course: String, location: String, time: String, date: String, key: String = "") {
 
             self.ref = nil
             self.key = key
             self.id = key
             
             self.name = name
+            self.description = description
             self.isStudyGroup = isStudyGroup
             self.subject = subject
             self.course = course
@@ -51,6 +53,7 @@
             guard
                 let value = snapshot.value as? [String: AnyObject],
                 let name = value["name"] as? String,
+                let description = value["description"] as? String,
                 let isStudyGroup = value["isStudyGroup"] as? String,
                 let subject = value["subject"] as? String,
                 let course = value["course"] as? String,
@@ -67,6 +70,7 @@
             self.id = snapshot.key
             
             self.name = name
+            self.description = description
             self.isStudyGroup = isStudyGroup
             self.subject = subject
             self.course = course
@@ -78,6 +82,7 @@
         func toAnyObject() -> Any {
             return [
                 "name": name,
+                "description": description,
                 "isStudyGroup": isStudyGroup,
                 "subject": subject,
                 "course": course,

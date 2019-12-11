@@ -18,27 +18,14 @@
         
         var body: some View {
             
-            
-            NavigationView {
-                Group {
-                    
-                    List {
-                        PopulatePUEvent()
-                            
-                           
-                        }
-                    }
-                    
-            }.onAppear(perform: getPUEvents)
-                
-            }
-
+            return Spacer()
+        }
         
         func PopulatePUEvent() -> some View {
             
              var currentString: String = ""
 
-            currentString = "Array length " + String(session.items.count)
+            currentString = "Array length " + String(session.pickUpItems.count)
 
             
             

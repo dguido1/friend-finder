@@ -16,11 +16,12 @@
         //MARK: Properties
         @Published var session: User?
         @Published var isLoggedIn: Bool?
-        @Published var items: [PickUpEvent] = []
+        @Published var pickUpItems: [PickUpEvent] = []
+        @Published var organizationItems: [OrganizationEvent] = []
         
-        var ref = Database.database().reference().child("PickupEvents")
+        var pickupRef = Database.database().reference().child("PickupEvents")
+        var organizationRef = Database.database().reference().child("OrganizationEvents")
         
-        //MARK: Functions
         func listen() {
             Auth.auth().addStateDidChangeListener { (auth, user) in
                 if let user = user
@@ -50,65 +51,71 @@
         func signUp(email: String, password: String, handler: @escaping AuthDataResultCallback) {
             Auth.auth().createUser(withEmail: email, password: password, completion: handler)
         }
-        
-        /*
-         func getTODOS() {
-             ref.observe(DataEventType.value) { (snapshot) in
-                 self.items = []
-                 for child in snapshot.children {
-                     if let snapshot = child as? DataSnapshot,
-                         let toDo = TODOS(snapshot: snapshot) {
-                         self.items.append(toDo)
-                     }
-                 }
-             }
-         }
-         */
+
         func getPickUpEvents() {
             
-            ref.observe(DataEventType.value) { (snapshot) in
-                    self.items = []
+            pickupRef.observe(DataEventType.value) { (snapshot) in
+                    self.pickUpItems = []
                     for child in snapshot.children {
                         if let snapshot = child as? DataSnapshot,
                             let event = PickUpEvent(snapshot: snapshot) {
-                            self.items.append(event)
+                            self.pickUpItems.append(event)
                         }
                     }
                 }
         }
-        /*
-        func getPickUpEvents() {
-            ref.child("kpztfkVAyrZxWA36fp2sArFw7Kh2").child("PickupEvents").observe(DataEventType.value) { (snapshot) in
-                self.items = []
-                for child in snapshot.children
-                {
-                    if let snapshot = child as? DataSnapshot,
-                        let pickUpEvent = PickUpEvent(snapshot: snapshot)
-                    {
-                        self.items.append(pickUpEvent)
-                    }
-                }
-            }
-        }*/
-        func uploadPickUpEvent(eventName: String, isEventStudyGroup: String, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
+      
+        func uploadPickUpEvent(eventName: String, eventDescription: String, isEventStudyGroup: String, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
 
             let number = Int(Date.timeIntervalSinceReferenceDate * 1000)
             
-            let postRef = ref.child(String(number))
-            let post = PickUpEvent(name: eventName, isStudyGroup: isEventStudyGroup, subject: eventSubject, course: eventCourse, location: eventLocation, time: eventTime, date: eventDate)
+            let postRef = pickupRef.child(String(number))
+            let post = PickUpEvent(name: eventName, description: eventDescription, isStudyGroup: isEventStudyGroup, subject: eventSubject, course: eventCourse, location: eventLocation, time: eventTime, date: eventDate)
             
             postRef.setValue(post.toAnyObject())
         }
         
-        func updatePickUpEvent(key: String, eventName: String, isEventStudyGroup: String, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
+        func updatePickUpEvent(key: String, eventName: String, eventDescription: String, isEventStudyGroup: String, eventSubject: String, eventCourse: String, eventLocation: String, eventTime: String, eventDate: String) {
             
             let update : [String:Any] =
-                ["eventName": eventName,
+                ["eventName": eventName, "eventDescription": eventDescription,
                  "isEventStudyGroup": isEventStudyGroup,
                  "eventSubject": eventSubject,
                  "eventCourse": eventCourse, "eventLocation": eventLocation, "eventTime": eventTime, "eventDate": eventDate]
             
             let childUpdate = ["\(key)": update]
-            ref.updateChildValues(childUpdate)
+            pickupRef.updateChildValues(childUpdate)
         }
+        
+          func getOrganizationEvents() {
+              
+             organizationRef.observe(DataEventType.value) { (snapshot) in
+                      self.organizationItems = []
+                      for child in snapshot.children {
+                          if let snapshot = child as? DataSnapshot,
+                              let event = OrganizationEvent(snapshot: snapshot) {
+                            self.organizationItems.append(event)
+                          }
+                      }
+                  }
+          }
+        
+          func uploadOrganizationEvent(eventName: String, eventDescription: String, eventLocation: String, eventTime: String, eventDate: String) {
+
+              let number = Int(Date.timeIntervalSinceReferenceDate * 1000)
+              
+              let postRef = organizationRef.child(String(number))
+              let post = OrganizationEvent(name: eventName, description: eventDescription, location: eventLocation, time: eventTime, date: eventDate)
+              
+              postRef.setValue(post.toAnyObject())
+          }
+          
+          func updateOrganizationEvent(key: String, eventName: String, eventDescription: String, eventLocation: String, eventTime: String, eventDate: String) {
+              
+              let update : [String:Any] =
+                  ["eventName": eventName, "eventDescription": eventDescription, "eventLocation": eventLocation, "eventTime": eventTime, "eventDate": eventDate]
+              
+              let childUpdate = ["\(key)": update]
+              organizationRef.updateChildValues(childUpdate)
+          }
     }
