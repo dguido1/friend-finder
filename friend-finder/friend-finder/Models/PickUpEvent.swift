@@ -21,7 +21,7 @@
         let id: String
         
         // Pick Up Event
-        var isStudyGroup: Bool
+        var isStudyGroup: String
         var subject: String
         var course: String
         
@@ -32,7 +32,7 @@
         var time: String   // Time conv
         var date: String
         
-        init(name: String, isStudyGroup: Bool, subject: String, course: String, location: String, time: String, date: String, key: String = "") {
+        init(name: String, isStudyGroup: String, subject: String, course: String, location: String, time: String, date: String, key: String = "") {
 
             self.ref = nil
             self.key = key
@@ -51,7 +51,7 @@
             guard
                 let value = snapshot.value as? [String: AnyObject],
                 let name = value["name"] as? String,
-                let isStudyGroup = value["isStudyGroup"] as? Bool,
+                let isStudyGroup = value["isStudyGroup"] as? String,
                 let subject = value["subject"] as? String,
                 let course = value["course"] as? String,
                 let location = value["location"] as? String,

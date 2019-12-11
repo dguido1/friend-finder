@@ -5,20 +5,80 @@
     //  CSUF Fall 2019
     //
     //  Created by David Guido, Pierce Findlay & Kayla Nguyen on 11/01/2019.
-
+    
     import SwiftUI
-
+    
     struct Search: View {
-            var body: some View {
+        
+        var puEvents = [PickUpEvent]()
+        var index: Int = 0
+
+        
+        @ObservedObject var session = FirebaseSession()
+        
+        var body: some View {
+            
+            
+            NavigationView {
+                Group {
+                    
+                    List {
+                        PopulatePUEvent()
                             
-                HStack() {
-                    Spacer()
-                    VStack {
-                        Text("Is Complete")
+                           
+                        }
                     }
-                }
-                .padding()
+                    
+            }.onAppear(perform: getPUEvents)
+                
             }
+
+        
+        func PopulatePUEvent() -> some View {
+            
+             var currentString: String = ""
+            
+            if session.items.count > 0
+            {
+                currentString = "Item #: " + String(index)
+            }
+            else
+            {
+                currentString = "Error, empty array"
+            }
+            
+            
+            return Text (currentString)
+            
+
+        }
+
+        //MARK: Functions
+        func getUser() {
+            session.listen()
+        }
+        
+        //MARK: Functions
+        func getPUEvents() {
+            session.getPickUpEvents()
+        }
+        
+        func DetailPUEventView(pickUpEvent: PickUpEvent) -> some View {
+            
+            HStack {
+                Text(pickUpEvent.name)
+                
+                Spacer()
+                
+                if pickUpEvent.isStudyGroup == "true" {
+                    Image(systemName: "checkmark").imageScale(.medium)
+                } else {
+                    Image(systemName: "xmark").imageScale(.medium)
+                }
+            }
+            
+            
+        }
     }
     
     struct Search_Previews: PreviewProvider {

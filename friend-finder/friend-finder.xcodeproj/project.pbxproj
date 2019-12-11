@@ -33,6 +33,7 @@
 		BB874332239BBFDE00DFD2F9 /* NavBarStateViewStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB874331239BBFDE00DFD2F9 /* NavBarStateViewStudent.swift */; };
 		BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63C239D100E0098367A /* BlueToggle.swift */; };
 		BB8EE63F239D10560098367A /* GreenToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EE63E239D10560098367A /* GreenToggle.swift */; };
+		BBFF235C23A11CA400B87156 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF235B23A11CA400B87156 /* ImageService.swift */; };
 		FC81FE494203023D4D36696B /* Pods_friend_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		BB874331239BBFDE00DFD2F9 /* NavBarStateViewStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarStateViewStudent.swift; sourceTree = "<group>"; };
 		BB8EE63C239D100E0098367A /* BlueToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToggle.swift; sourceTree = "<group>"; };
 		BB8EE63E239D10560098367A /* GreenToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenToggle.swift; sourceTree = "<group>"; };
+		BBFF235B23A11CA400B87156 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		D5380BDA618E24FCE1A176E8 /* Pods_friend_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friend_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 				BB086379239EF71D00C4886B /* NavBarStateViewOrganization.swift */,
 				BB08637D239EF9BB00C4886B /* Student */,
 				BB086384239EFAA500C4886B /* Organization */,
+				BBFF235B23A11CA400B87156 /* ImageService.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				BB8EE63F239D10560098367A /* GreenToggle.swift in Sources */,
 				BB086383239EFA8C00C4886B /* CreateOrganization.swift in Sources */,
 				BB8EE63D239D100E0098367A /* BlueToggle.swift in Sources */,
+				BBFF235C23A11CA400B87156 /* ImageService.swift in Sources */,
 				BB874330239BBF5600DFD2F9 /* AuthenticationHandler.swift in Sources */,
 				A1F7A6DF23322CFF00BC7537 /* AppDelegate.swift in Sources */,
 				BB086375239DF59700C4886B /* ColoredToggleStyle.swift in Sources */,

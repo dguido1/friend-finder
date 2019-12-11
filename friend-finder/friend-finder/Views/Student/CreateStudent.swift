@@ -15,7 +15,7 @@
         }
         
         // Pick up event vars
-        @State var isEventStudyGroup: Bool = false
+        @State var isEventStudyGroup: Bool = true
         @State var eventSubject: String = ""
         @State var eventCourse: String = ""
         
@@ -208,8 +208,20 @@
                 let eTime = timeFormatter.string(from: selectedDate)
                 
                 let eLocation = String(selectedLocation)
+
                 
-                session.uploadPickUpEvent(eventName: self.eventName, isEventStudyGroup: !self.isEventStudyGroup, eventSubject: self.eventSubject, eventCourse: self.eventCourse, eventLocation: eLocation, eventTime: eTime, eventDate: eDate)
+                var isEStudyGroup: String = ""
+                    
+                if isEventStudyGroup
+                {
+                    isEStudyGroup = "true"
+                }
+                else
+                {
+                    isEStudyGroup = "false"
+                }
+                
+                session.uploadPickUpEvent(eventName: self.eventName, isEventStudyGroup: isEStudyGroup, eventSubject: self.eventSubject, eventCourse: self.eventCourse, eventLocation: eLocation, eventTime: eTime, eventDate: eDate)
                 
             }
         }
