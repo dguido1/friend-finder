@@ -37,15 +37,9 @@
         func PopulatePUEvent() -> some View {
             
              var currentString: String = ""
-            
-            if session.items.count > 0
-            {
-                currentString = "Item #: " + String(index)
-            }
-            else
-            {
-                currentString = "Error, empty array"
-            }
+
+            currentString = "Array length " + String(session.items.count)
+
             
             
             return Text (currentString)

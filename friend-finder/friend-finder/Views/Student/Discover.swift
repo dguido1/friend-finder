@@ -100,9 +100,14 @@
                     // Notifications parent container formatting
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: Alignment.center).aspectRatio(contentMode: .fit).padding(.vertical, 20)
                 
-            }   // End VStack (Body --> Main Container)
-        }   // End Body
+                // End VStack (Body --> Main Container)
+            }.onAppear(perform: getPUEvents)
+        }
         
+        //MARK: Functions
+        func getPUEvents() {
+            session.getPickUpEvents()
+        }
         
         
         // EventItemCard parent container
@@ -117,12 +122,12 @@
         }
         
         /*
-            Custom Event Card View
+         Custom Event Card View
          */
         func EventItemCard(cardImage : String, index: Int) -> some View {
             
             var cardEvent : PickUpEvent
-                                    
+            
             return  VStack {
                 // ScrollView element texts
                 VStack(alignment: .leading) {
@@ -159,29 +164,31 @@
                 // EventItemCard parent container formatting
             }.frame(minHeight: 0, maxHeight: 276)
         }
+        
     }
+    
+    
+    /*
+     Custom Notification View
+     */
+    struct NotificationItem : View {
+        var icon : String
+        var message : String
         
-        /*
-         Custom Notification View
-         */
-        struct NotificationItem : View {
-            var icon : String
-            var message : String
-            
-            var body : some View {
-                // Notification parent container
-                return  HStack {
-                    Image(systemName: icon).font(.subheadline).frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
-                    
-                    Text(message).font(.subheadline)
-                    
-                    // Notification parent container formatting
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading)
-            }
+        var body : some View {
+            // Notification parent container
+            return  HStack {
+                Image(systemName: icon).font(.subheadline).frame(minWidth: 30, maxWidth: 30, minHeight: 30, maxHeight: 30)
+                
+                Text(message).font(.subheadline)
+                
+                // Notification parent container formatting
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: Alignment.leading)
         }
-        
-        struct Discover_Previews: PreviewProvider {
-            static var previews: some View {
-                Discover()
-            }
+    }
+    
+    struct Discover_Previews: PreviewProvider {
+        static var previews: some View {
+            Discover()
+        }
     }

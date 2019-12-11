@@ -66,7 +66,7 @@
          */
         func getPickUpEvents() {
             
-                ref.observe(DataEventType.value) { (snapshot) in
+            ref.observe(DataEventType.value) { (snapshot) in
                     self.items = []
                     for child in snapshot.children {
                         if let snapshot = child as? DataSnapshot,
