@@ -13,6 +13,16 @@
         @State var animation = true
         @ObservedObject var session = FirebaseSession()
         
+        static let color00 = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
+        static let color01 = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
+
+        static let color02 = Color(red: 139.0 / 255, green: 72.0 / 255, blue: 120.0 / 255)
+        static let color03 = Color(red: 139.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
+
+        static let color04 = Color(red: 259.0 / 255, green: 22.0 / 255, blue: 120.0 / 255)
+        static let color05 = Color(red: 259.0 / 255, green: 132.0 / 255, blue: 20.0 / 255)
+        
+        
         // Date function, returns current date
         static let dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
@@ -26,7 +36,7 @@
             
             return  VStack {
                 
-                HStack {                                    // Title container
+                HStack {                        // Title container
                     VStack (alignment: .leading) {
                         
                         // Date text ('Sat' hard-coded + call to current date function)
@@ -36,7 +46,7 @@
                         // Line divider
                         Divider().padding(.vertical, -15)
                         
-                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top).padding(.top, 25)
+                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top)
                     
                     // Settings button
                     Button(action:
@@ -48,7 +58,7 @@
                     })
                     
                     // Navbar container formatting
-                }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30)
+                }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30).padding(.bottom, 40)
                 
                 // Events ScrollView
                 ScrollView (.horizontal, showsIndicators: false) {
@@ -64,7 +74,7 @@
                         // EventCards horizontal stack formatting
                     }.padding(.leading, 40)
                     // ScrollView formatting
-                }.padding(.vertical, 25)
+                }.padding(.vertical, 0)
                 
                 
                 // Notifications parent container
@@ -98,7 +108,7 @@
                     }.padding(.horizontal, 25)
                     
                     // Notifications parent container formatting
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: Alignment.center).aspectRatio(contentMode: .fit).padding(.vertical, 20)
+                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: Alignment.center).aspectRatio(contentMode: .fit)
                 
                 // End VStack (Body --> Main Container)
             }.onAppear(perform: getPUEvents)
@@ -114,10 +124,10 @@
         func GetEventTypeLabel(pickUpEvent: PickUpEvent) -> some View {
             
             if pickUpEvent.isStudyGroup == "true" {
-                return AnyView(Text("Study Group"))
+                return Text("Study Group")
             }
             else {
-                return AnyView(Text("Meeting Location"))
+                return Text("Study Group")
             }
         }
         
@@ -126,7 +136,24 @@
          */
         func EventItemCard(cardImage : String, index: Int) -> some View {
             
-            var cardEvent : PickUpEvent
+            var currentColor00: Color
+            var currentColor01: Color
+            
+            if (index == 0)
+            {
+                currentColor00 = Self.color00
+                currentColor01 = Self.color01
+            }
+            else if (index == 1)
+            {
+                currentColor00 = Self.color02
+                currentColor01 = Self.color03
+            }
+            else
+            {
+                currentColor00 = Self.color04
+                currentColor01 = Self.color05
+            }
             
             return  VStack {
                 // ScrollView element texts
@@ -134,27 +161,40 @@
                     if (session.pickUpItems.count > 0)
                     {
                         Text(session.pickUpItems[index].date).font(.callout).fontWeight(.heavy).foregroundColor(Color.blue)
-                        GetEventTypeLabel(pickUpEvent: session.pickUpItems[index])
+                        Text("Study Group").font(.callout).foregroundColor(Color.black)
                         Text(session.pickUpItems[index].name).font(.title).foregroundColor(Color.black)
                     }
                     else
                     {
-                        Text("Empty Table or events counldnt be populated").font(.title).foregroundColor(Color.black)
+                        Text("Empty Table or events couldnt be populated").font(.title).foregroundColor(Color.black)
                     }
                     
                     // ScrollView element texts formatting
-                }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                }.padding(.top, 20).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
                 // ScrollView button (image, mask, shadow)
                 HStack {
                     Button (action:{
                     }){
-                        Image(cardImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .cornerRadius(10)
-                            .shadow(radius: 10)
+                        ZStack {
+                            VStack {
+                                if (session.pickUpItems.count > 0) {
+
+                                        Text ("Type: Study Group").foregroundColor(Color.black).zIndex(5)
+                                        Text ("Subject: " + session.pickUpItems[index].subject).foregroundColor(Color.black).zIndex(5)
+                                        Text ("Course: " + session.pickUpItems[index].course).foregroundColor(Color.black).zIndex(5)
+
+                                }
+                            }.zIndex(5).padding(10).cornerRadius(10).background(Color.white).frame(minWidth: 250, maxWidth: 250, minHeight: 80, maxHeight: 80)
+                            Rectangle()
+                            .fill(LinearGradient(
+                              gradient: .init(colors: [currentColor00, currentColor01]),
+                              startPoint: .init(x: 0.5, y: 0),
+                              endPoint: .init(x: 0.5, y: 0.6)
+                            )).cornerRadius(25).zIndex(0)
+                            .frame(width: 300, height: 200)
+                            
+                        }
                     }.buttonStyle(PlainButtonStyle())
                     
                     // Right arrow image

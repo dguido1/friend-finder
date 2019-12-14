@@ -36,6 +36,15 @@ struct CreateOrganization: View {
     @ObservedObject var session = FirebaseSession()
     @Environment(\.presentationMode) var presentationMode
     
+    // Date function, returns current date
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+    
+    var now = Date()
+    
     var body: some View {
         
         CreateOrganizationHandler()
@@ -67,6 +76,29 @@ struct CreateOrganization: View {
     func DefaultView() -> some View {
         
         return VStack {
+            HStack {                        // Title container
+                VStack (alignment: .leading) {
+                    
+                    // Date text ('Sat' hard-coded + call to current date function)
+                    Text ("Saturday, \(now, formatter: Self.dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)
+                    Text ("Create").font(.largeTitle).fontWeight(.bold).bold().foregroundColor(Color.black)
+                    
+                    // Line divider
+                    Divider().padding(.vertical, -15)
+                    
+                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top)
+                
+                // Settings button
+                Button(action:
+                    {
+                        // Add an action here
+                }, label:
+                    {
+                        Image(systemName: "gear").font(.title).foregroundColor(.gray)
+                })
+                
+                // Navbar container formatting
+            }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30)
             CustomNameInputView()
             Divider().padding(.bottom, 5).padding(.top, -5)
             CustomDescriptionInputView()

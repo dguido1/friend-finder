@@ -13,25 +13,68 @@
         var puEvents = [PickUpEvent]()
         var index: Int = 0
 
-        
         @ObservedObject var session = FirebaseSession()
+        
+        // Date function, returns current date
+        static let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter
+        }()
+        
+        var now = Date()
         
         var body: some View {
             
-            return Spacer()
+            return PopulateEvents().padding(15)
         }
         
-        func PopulatePUEvent() -> some View {
+        func PopulateEvents() -> some View {
             
-             var currentString: String = ""
+            let studentEvents = session.pickUpItems
+            let organizationEvents = session.organizationItems
+            
+            getPUEvents()
+            getOrganizationEvents()
 
-            currentString = "Array length " + String(session.pickUpItems.count)
-
-            
-            
-            return Text (currentString)
-            
-
+            return VStack {
+                HStack {                        // Title container
+                    VStack (alignment: .leading) {
+                        
+                        // Date text ('Sat' hard-coded + call to current date function)
+                        Text ("Saturday, \(now, formatter: Self.dateFormatter)").font(.subheadline).bold().multilineTextAlignment(.leading).foregroundColor(Color.gray)
+                        Text ("Search").font(.largeTitle).fontWeight(.bold).bold().foregroundColor(Color.black)
+                        
+                        // Line divider
+                        Divider().padding(.vertical, -15)
+                        
+                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 75, alignment: Alignment.top)
+                    
+                    // Settings button
+                    Button(action:
+                        {
+                            // Add an action here
+                    }, label:
+                        {
+                            Image(systemName: "gear").font(.title).foregroundColor(.gray)
+                    })
+                    
+                    // Navbar container formatting
+                }.frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.top).padding(.horizontal, 30)
+                Text("Student Events: ").font(.headline).fontWeight(.bold).multilineTextAlignment(.center)
+                
+                List(studentEvents) { pickUpEvent in
+                    PickupRow(pickUpEvent: pickUpEvent)
+                }
+                
+                
+                Text("Organization Events: ").font(.headline).fontWeight(.bold).multilineTextAlignment(.center)
+                
+                List(organizationEvents) { organizationEvent in
+                  OrganizationRow(organizationEvent: organizationEvent)
+                }
+            }
+                
         }
 
         //MARK: Functions
@@ -42,6 +85,10 @@
         //MARK: Functions
         func getPUEvents() {
             session.getPickUpEvents()
+        }
+        
+        func getOrganizationEvents() {
+            session.getOrganizationEvents()
         }
         
         func DetailPUEventView(pickUpEvent: PickUpEvent) -> some View {
@@ -59,6 +106,21 @@
             }
             
             
+        }
+    }
+    struct PickupRow: View {
+        var pickUpEvent: PickUpEvent
+
+        var body: some View {
+            Text("Name: \(pickUpEvent.name)")
+        }
+    }
+
+    struct OrganizationRow: View {
+        var organizationEvent: OrganizationEvent
+
+        var body: some View {
+            Text("Name: \(organizationEvent.name)")
         }
     }
     

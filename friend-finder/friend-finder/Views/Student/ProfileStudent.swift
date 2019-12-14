@@ -13,11 +13,11 @@
             // Parent container (Full view)
             VStack {
                 // ProfileInfo container
-                ProfileInfo (profilePicture: "Alpar", studentName: "Issac Lentz", studentCity: "Fullerton, CA")
+                ProfileInfo (profilePicture: "Alpar", studentName: "Student Name", studentCity: "City")
                 
                 Divider()
                 
-                Text("Member of ").foregroundColor(Color.gray) + Text("3").bold().fontWeight(.heavy).foregroundColor(Color.gray) + Text(" Campus Clubs").foregroundColor(Color.gray)
+                Text("Member of ").foregroundColor(Color.gray) + Text("0").bold().fontWeight(.heavy).foregroundColor(Color.gray) + Text(" Campus Clubs").foregroundColor(Color.gray)
                 // Edit profile button
                 Button(action: {
                     
@@ -28,23 +28,17 @@
                 Divider()
                 
                 NavigationView {
-                    List {
-                        // EventItemButons (Hard-coded)
-                        EventItemButton(iconColor: Color.red, eventIcon: "heart", nameText: "SHPH Blood Drive", dateText: "Monday, September 30th, 7:30 AM", likesText: "5")
-                        EventItemButton(iconColor: Color.blue, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
-                        EventItemButton(iconColor: Color.green, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, October 1st, 4:00 PM", likesText: "1")
-                        EventItemButton(iconColor: Color.orange, eventIcon: "bandage", nameText: "U.S. Army Medical DRASH", dateText: "Wednesday, October 30th, 8:00 AM", likesText: "9")
-                        EventItemButton(iconColor: Color.black, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
-                        EventItemButton(iconColor: Color.purple, eventIcon: "house", nameText: "Fall Open House", dateText: "Friday, November 22nd, 6:30 PM", likesText: "2")
-                        EventItemButton(iconColor: Color.pink, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, October 1st, 4:00 PM", likesText: "1")
-                        EventItemButton(iconColor: Color.yellow, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, November 5th, 4:00 PM", likesText: "0")
-                        EventItemButton(iconColor: Color.gray, eventIcon: "person.3", nameText: "SHPH General Meetings", dateText: "Tuesday, December 3rd, 4:00 PM", likesText: "3")
+               
+                        HStack {
+                            Text("No recent events.\nFind some in the Discover or Search tab.").font(.caption).fontWeight(.bold).multilineTextAlignment(.center)
+                   
+                        
                     }
                     .navigationBarItems(leading:
                     Spacer()
                         
                     ).navigationBarTitle(Text("Recent Events"), displayMode: .automatic).lineLimit(100)
-                }
+                }.padding(.bottom, 100)
                 
             // Parent container formatting
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top).padding(.top, 35).lineLimit(100)
@@ -103,7 +97,7 @@
                         
                         // Profile title texts vertical stack
                         VStack {
-                            Text (studentName).font(.title).fontWeight(.bold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            Text (studentName).font(.headline).fontWeight(.bold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             Text(studentCity).font(.subheadline).fontWeight(.medium).foregroundColor(.gray).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             
                             // Edit profile button

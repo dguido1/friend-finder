@@ -162,6 +162,7 @@
 			children = (
 				BB08637B239EF75B00C4886B /* Events.swift */,
 				BB086382239EFA8C00C4886B /* CreateOrganization.swift */,
+				BB08637E239EF9F300C4886B /* ProfileOrganization.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -176,7 +177,6 @@
 				BB08637D239EF9BB00C4886B /* Student */,
 				BB086384239EFAA500C4886B /* Organization */,
 				BBFF235B23A11CA400B87156 /* ImageService.swift */,
-				BB08637E239EF9F300C4886B /* ProfileOrganization.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
