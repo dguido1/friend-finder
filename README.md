@@ -74,12 +74,9 @@
 
 # Development
 
-### &nbsp;&nbsp;&nbsp;&nbsp;**Current State**
-<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-in-still.png" alt="alt text" width="400px" height="auto">
-
-<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-In00.gif" alt="alt text" width="400px" height="auto">
-
-<img src="https://github.com/dguido1/friend-finder/blob/master/friend-finder/demoGIFS/log-In01.gif" alt="alt text" width="400px" height="auto">
+### &nbsp;&nbsp;&nbsp;&nbsp;**Final State**
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/47490318/73598482-9ec6fb80-44ed-11ea-8cf5-b6073d1deb95.gif)
+![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/47490318/73598483-9f5f9200-44ed-11ea-97e0-8ede8ef57c36.gif)
 
 
 ## Custom Views (SwiftUI)
